@@ -1,0 +1,7 @@
+DELIMITER $$ 
+CREATE TRIGGER update_hist
+BEFORE INSERT 
+ON userpokemon FOR EACH ROW
+BEGIN
+    INSERT INTO hist_trade VALUES (new.idUser, new.numPokemon, DATE_FORMAT(NOW(), '%d/%m/%y %T'));
+END $$
