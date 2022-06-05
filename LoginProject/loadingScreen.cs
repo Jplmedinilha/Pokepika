@@ -15,6 +15,8 @@ namespace LoginProject
         public loadingScreen()
         {
             InitializeComponent();
+            this.BackColor = Color.LimeGreen;
+            this.TransparencyKey = Color.LimeGreen;
         }
     }
 }
