@@ -17,6 +17,7 @@ namespace LoginProject
         int speed = 2;
 
         int isAdm;
+        User user = new User();
         public Campo(string nome, int adm)
         {
             InitializeComponent();
@@ -33,7 +34,50 @@ namespace LoginProject
             }
 
             picCharacter.BringToFront();
+            updateCoins();
+            lblUser.Text = nome;
+
+            startList();
+
         }
+
+        private void startList()
+        {
+            lstInventory.View = View.Details;
+            lstInventory.LabelEdit = true;
+            lstInventory.AllowColumnReorder = true;
+            lstInventory.FullRowSelect = true;
+            lstInventory.GridLines = true;
+            lstInventory.Sorting = SortOrder.Ascending;
+
+            lstInventory.Columns.Add("Num", 60, HorizontalAlignment.Left);
+            lstInventory.Columns.Add("Name", 60, HorizontalAlignment.Left);
+            lstInventory.Columns.Add("Type", 60, HorizontalAlignment.Left);
+            lstInventory.Columns.Add("Atk", 60, HorizontalAlignment.Left);
+            lstInventory.Columns.Add("HP", 60, HorizontalAlignment.Left);
+            lstInventory.Columns.Add("$$", 60, HorizontalAlignment.Left);
+            lstInventory.Columns.Add("Gym", 60, HorizontalAlignment.Left);
+
+            getPkm();
+        }
+
+        public void getPkm()
+        {
+            lstInventory.Items.Clear();
+            Inventory inventory = new Inventory();
+            inventory.getInventory(lblUsername.Text);
+
+            while (inventory.leitura.Read())
+            {
+
+
+                inventory.leitura.GetString(0);
+
+                var rowView = new ListViewItem(inventory.leitura.GetString(0));
+                lstInventory.Items.Add(rowView);
+            }
+        }
+
 
         private void Campo_KeyDown(object sender, KeyEventArgs e)
         {
@@ -122,7 +166,7 @@ namespace LoginProject
 
         private void Campo_Load(object sender, EventArgs e)
         {
-
+           lstInventory.Enabled = false; //desabitei por enquanto, falta terminar a lista de inventario na tela Campo
         }
 
         private void moveTimerEvent(object sender, EventArgs e)
@@ -195,6 +239,11 @@ namespace LoginProject
 
         }
 
+        public void updateCoins()
+        {
+            lblBalance.Text = user.getBalance(Login.getUsername()).ToString();
+        }
+
         private void Campo_KeyPress(object sender, KeyPressEventArgs e)
         {
             
@@ -240,6 +289,21 @@ namespace LoginProject
         private void pictureBox10_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void lblUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstInventory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private bool upAble()// ^^^

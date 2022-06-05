@@ -12,7 +12,7 @@ namespace LoginProject
     {
         Conexao conn = new Conexao();
         MySqlCommand cmd = new MySqlCommand();
-        public MySqlDataReader leitura; 
+        public MySqlDataReader leitura;
         public bool addInventory(string username, int numPokemon)
         {
             conn.disconnect();
@@ -26,7 +26,7 @@ namespace LoginProject
                 cmd.Connection = conn.connect();
                 cmd.ExecuteNonQuery();
                 conn.disconnect();
- 
+
                 return true;
             }
             catch (Exception ex)
@@ -36,7 +36,7 @@ namespace LoginProject
                 return false;
             }
 
-            
+
         }
 
         public bool exists(int idPokemon, string username)
@@ -51,15 +51,33 @@ namespace LoginProject
                 leitura = cmd.ExecuteReader();
 
                 return leitura.HasRows;
-               
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("erro exits" + ex);
-                return false; 
+                return false;
             }
         }
 
+        public bool getInventory(String username)
+        {
+            cmd.CommandText = $"SELECT getPokemon(numPokemon) FROM userpokemon where idUser = (SELECT idUser from `user` where username = '{username}');";
 
+            try
+            {
+                conn.disconnect();
+                cmd.Connection = conn.connect();
+                leitura = cmd.ExecuteReader();
+               
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+
+        }
     }
-}
+   }
