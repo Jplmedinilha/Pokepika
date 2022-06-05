@@ -18,5 +18,10 @@ namespace LoginProject
             this.BackColor = Color.LimeGreen;
             this.TransparencyKey = Color.LimeGreen;
         }
+
+        private void loadingScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
