@@ -64,9 +64,10 @@ namespace LoginProject
             // labely
             // 
             this.labely.AutoSize = true;
-            this.labely.Location = new System.Drawing.Point(1182, 114);
+            this.labely.Location = new System.Drawing.Point(1576, 140);
+            this.labely.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labely.Name = "labely";
-            this.labely.Size = new System.Drawing.Size(14, 13);
+            this.labely.Size = new System.Drawing.Size(17, 16);
             this.labely.TabIndex = 4;
             this.labely.Text = "Y";
             this.labely.Visible = false;
@@ -74,9 +75,10 @@ namespace LoginProject
             // labelx
             // 
             this.labelx.AutoSize = true;
-            this.labelx.Location = new System.Drawing.Point(1182, 92);
+            this.labelx.Location = new System.Drawing.Point(1576, 113);
+            this.labelx.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelx.Name = "labelx";
-            this.labelx.Size = new System.Drawing.Size(14, 13);
+            this.labelx.Size = new System.Drawing.Size(16, 16);
             this.labelx.TabIndex = 3;
             this.labelx.Text = "X";
             this.labelx.Visible = false;
@@ -90,18 +92,20 @@ namespace LoginProject
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(6, 588);
+            this.lblUsername.Location = new System.Drawing.Point(8, 724);
+            this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(36, 13);
+            this.lblUsername.Size = new System.Drawing.Size(47, 16);
             this.lblUsername.TabIndex = 62;
             this.lblUsername.Text = "Player";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1050, 303);
+            this.pictureBox2.Location = new System.Drawing.Point(1400, 373);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(166, 114);
+            this.pictureBox2.Size = new System.Drawing.Size(221, 140);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 66;
             this.pictureBox2.TabStop = false;
@@ -109,9 +113,10 @@ namespace LoginProject
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(966, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(1288, 41);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 94);
+            this.pictureBox1.Size = new System.Drawing.Size(180, 116);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 65;
             this.pictureBox1.TabStop = false;
@@ -119,9 +124,10 @@ namespace LoginProject
             // picGym2
             // 
             this.picGym2.Image = ((System.Drawing.Image)(resources.GetObject("picGym2.Image")));
-            this.picGym2.Location = new System.Drawing.Point(755, 55);
+            this.picGym2.Location = new System.Drawing.Point(1007, 68);
+            this.picGym2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picGym2.Name = "picGym2";
-            this.picGym2.Size = new System.Drawing.Size(127, 72);
+            this.picGym2.Size = new System.Drawing.Size(169, 89);
             this.picGym2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picGym2.TabIndex = 64;
             this.picGym2.TabStop = false;
@@ -129,9 +135,10 @@ namespace LoginProject
             // picGym1
             // 
             this.picGym1.Image = ((System.Drawing.Image)(resources.GetObject("picGym1.Image")));
-            this.picGym1.Location = new System.Drawing.Point(568, 44);
+            this.picGym1.Location = new System.Drawing.Point(757, 54);
+            this.picGym1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picGym1.Name = "picGym1";
-            this.picGym1.Size = new System.Drawing.Size(80, 83);
+            this.picGym1.Size = new System.Drawing.Size(107, 102);
             this.picGym1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picGym1.TabIndex = 63;
             this.picGym1.TabStop = false;
@@ -139,9 +146,10 @@ namespace LoginProject
             // picManager
             // 
             this.picManager.Image = ((System.Drawing.Image)(resources.GetObject("picManager.Image")));
-            this.picManager.Location = new System.Drawing.Point(113, 263);
+            this.picManager.Location = new System.Drawing.Point(151, 324);
+            this.picManager.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picManager.Name = "picManager";
-            this.picManager.Size = new System.Drawing.Size(132, 126);
+            this.picManager.Size = new System.Drawing.Size(176, 155);
             this.picManager.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picManager.TabIndex = 61;
             this.picManager.TabStop = false;
@@ -149,9 +157,10 @@ namespace LoginProject
             // picFence
             // 
             this.picFence.Image = ((System.Drawing.Image)(resources.GetObject("picFence.Image")));
-            this.picFence.Location = new System.Drawing.Point(89, 303);
+            this.picFence.Location = new System.Drawing.Point(119, 373);
+            this.picFence.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picFence.Name = "picFence";
-            this.picFence.Size = new System.Drawing.Size(178, 124);
+            this.picFence.Size = new System.Drawing.Size(237, 153);
             this.picFence.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picFence.TabIndex = 60;
             this.picFence.TabStop = false;
@@ -159,9 +168,10 @@ namespace LoginProject
             // picGrass1
             // 
             this.picGrass1.Image = ((System.Drawing.Image)(resources.GetObject("picGrass1.Image")));
-            this.picGrass1.Location = new System.Drawing.Point(21, 62);
+            this.picGrass1.Location = new System.Drawing.Point(28, 76);
+            this.picGrass1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picGrass1.Name = "picGrass1";
-            this.picGrass1.Size = new System.Drawing.Size(204, 177);
+            this.picGrass1.Size = new System.Drawing.Size(272, 218);
             this.picGrass1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picGrass1.TabIndex = 58;
             this.picGrass1.TabStop = false;
@@ -170,9 +180,10 @@ namespace LoginProject
             // 
             this.picGrass2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.picGrass2.Image = ((System.Drawing.Image)(resources.GetObject("picGrass2.Image")));
-            this.picGrass2.Location = new System.Drawing.Point(681, 356);
+            this.picGrass2.Location = new System.Drawing.Point(908, 438);
+            this.picGrass2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picGrass2.Name = "picGrass2";
-            this.picGrass2.Size = new System.Drawing.Size(180, 214);
+            this.picGrass2.Size = new System.Drawing.Size(240, 263);
             this.picGrass2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picGrass2.TabIndex = 57;
             this.picGrass2.TabStop = false;
@@ -180,9 +191,10 @@ namespace LoginProject
             // picCharacter
             // 
             this.picCharacter.Image = ((System.Drawing.Image)(resources.GetObject("picCharacter.Image")));
-            this.picCharacter.Location = new System.Drawing.Point(12, 603);
+            this.picCharacter.Location = new System.Drawing.Point(16, 742);
+            this.picCharacter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picCharacter.Name = "picCharacter";
-            this.picCharacter.Size = new System.Drawing.Size(20, 29);
+            this.picCharacter.Size = new System.Drawing.Size(27, 36);
             this.picCharacter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picCharacter.TabIndex = 56;
             this.picCharacter.TabStop = false;
@@ -190,9 +202,10 @@ namespace LoginProject
             // picMart
             // 
             this.picMart.Image = ((System.Drawing.Image)(resources.GetObject("picMart.Image")));
-            this.picMart.Location = new System.Drawing.Point(867, 468);
+            this.picMart.Location = new System.Drawing.Point(1156, 576);
+            this.picMart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picMart.Name = "picMart";
-            this.picMart.Size = new System.Drawing.Size(106, 102);
+            this.picMart.Size = new System.Drawing.Size(141, 126);
             this.picMart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picMart.TabIndex = 6;
             this.picMart.TabStop = false;
@@ -200,9 +213,10 @@ namespace LoginProject
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(1221, 12);
+            this.pictureBox10.Location = new System.Drawing.Point(1864, 13);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox10.Size = new System.Drawing.Size(20, 18);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 68;
             this.pictureBox10.TabStop = false;
@@ -211,9 +225,10 @@ namespace LoginProject
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(1242, 12);
+            this.pictureBox9.Location = new System.Drawing.Point(1892, 13);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox9.Size = new System.Drawing.Size(20, 18);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 67;
             this.pictureBox9.TabStop = false;
@@ -221,10 +236,10 @@ namespace LoginProject
             // 
             // Campo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1444, 657);
+            this.ClientSize = new System.Drawing.Size(1925, 809);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox2);
@@ -241,6 +256,7 @@ namespace LoginProject
             this.Controls.Add(this.labely);
             this.Controls.Add(this.labelx);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "Campo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
