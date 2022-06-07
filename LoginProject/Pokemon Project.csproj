@@ -103,6 +103,12 @@
     </Compile>
     <Compile Include="Conexao.cs" />
     <Compile Include="Inventory.cs" />
+    <Compile Include="Listitem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Listitem.Designer.cs">
+      <DependentUpon>Listitem.cs</DependentUpon>
+    </Compile>
     <Compile Include="loadingScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="changePW.resx">
       <DependentUpon>changePW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listitem.resx">
+      <DependentUpon>Listitem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loadingScreen.resx">
       <DependentUpon>loadingScreen.cs</DependentUpon>

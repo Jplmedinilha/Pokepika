@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,46 +38,11 @@ namespace LoginProject
             updateCoins();
             lblUser.Text = nome;
 
-            startList();
+         
 
         }
 
-        private void startList()
-        {
-            lstInventory.View = View.Details;
-            lstInventory.LabelEdit = true;
-            lstInventory.AllowColumnReorder = true;
-            lstInventory.FullRowSelect = true;
-            lstInventory.GridLines = true;
-            lstInventory.Sorting = SortOrder.Ascending;
-
-            lstInventory.Columns.Add("Num", 60, HorizontalAlignment.Left);
-            lstInventory.Columns.Add("Name", 60, HorizontalAlignment.Left);
-            lstInventory.Columns.Add("Type", 60, HorizontalAlignment.Left);
-            lstInventory.Columns.Add("Atk", 60, HorizontalAlignment.Left);
-            lstInventory.Columns.Add("HP", 60, HorizontalAlignment.Left);
-            lstInventory.Columns.Add("$$", 60, HorizontalAlignment.Left);
-            lstInventory.Columns.Add("Gym", 60, HorizontalAlignment.Left);
-
-            getPkm();
-        }
-
-        public void getPkm()
-        {
-            lstInventory.Items.Clear();
-            Inventory inventory = new Inventory();
-            inventory.getInventory(lblUsername.Text);
-
-            while (inventory.leitura.Read())
-            {
-
-
-                inventory.leitura.GetString(0);
-
-                var rowView = new ListViewItem(inventory.leitura.GetString(0));
-                lstInventory.Items.Add(rowView);
-            }
-        }
+  
 
 
         private void Campo_KeyDown(object sender, KeyEventArgs e)
@@ -142,6 +108,8 @@ namespace LoginProject
                 }
 
             }
+
+            flowLayoutPanel1.Enabled = false;// gambiarra para nao bugar o boneco
         }
 
         private void Campo_KeyUp(object sender, KeyEventArgs e)
@@ -162,11 +130,49 @@ namespace LoginProject
             {
                 moveDown = false;
             }
+            flowLayoutPanel1.Enabled = true;// gambiarra para nao bugar o boneco
         }
 
         private void Campo_Load(object sender, EventArgs e)
         {
-           lstInventory.Enabled = false; //desabitei por enquanto, falta terminar a lista de inventario na tela Campo
+          
+            populateItems();
+            flowLayoutPanel1.Enabled = false; // gambiarra para nao bugar o boneco
+
+        }
+
+        private void populateItems()
+        {
+            List<Listitem> listItems = new List<Listitem>();
+
+        
+            Inventory inventory = new Inventory();
+            inventory.getFullInventory(lblUsername.Text);
+
+            while (inventory.leitura.Read())
+            {
+                Listitem lstItem = new Listitem();
+
+
+                lstItem.Name = inventory.leitura.GetString(0);
+                lstItem.Type = inventory.leitura.GetString(1);
+              
+
+                byte[] img = (byte[])inventory.leitura["getPokeImage(numPokemon)"];
+
+                MemoryStream ms = new MemoryStream(img);
+                lstItem.Icon = Image.FromStream(ms);
+
+                listItems.Add(lstItem);
+
+                if (flowLayoutPanel1.Controls.Count < 0)
+                     flowLayoutPanel1.Controls.Clear();
+                else
+                     flowLayoutPanel1.Controls.Add(lstItem);
+
+
+            }
+
         }
 
         private void moveTimerEvent(object sender, EventArgs e)
@@ -304,6 +310,17 @@ namespace LoginProject
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Campo_Click(object sender, EventArgs e)
+        {
+            
+          
         }
 
         private bool upAble()// ^^^

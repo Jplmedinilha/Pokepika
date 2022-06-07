@@ -79,5 +79,26 @@ namespace LoginProject
 
 
         }
+
+
+        public bool getFullInventory(String username)
+        {
+            cmd.CommandText = $"SELECT getPokemon(numPokemon), getPokeType(numPokemon), getPokeImage(numPokemon) FROM userpokemon where idUser = (SELECT idUser from `user` where username = '{username}');";
+
+            try
+            {
+                conn.disconnect();
+                cmd.Connection = conn.connect();
+                leitura = cmd.ExecuteReader();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+
+        }
     }
    }
