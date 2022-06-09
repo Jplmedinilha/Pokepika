@@ -69,7 +69,7 @@ namespace LoginProject
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtSearch.Location = new System.Drawing.Point(37, 202);
+            this.txtSearch.Location = new System.Drawing.Point(37, 188);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(417, 31);
             this.txtSearch.TabIndex = 37;
@@ -79,7 +79,7 @@ namespace LoginProject
             this.listPkm.HideSelection = false;
             this.listPkm.Location = new System.Drawing.Point(37, 239);
             this.listPkm.Name = "listPkm";
-            this.listPkm.Size = new System.Drawing.Size(474, 504);
+            this.listPkm.Size = new System.Drawing.Size(474, 395);
             this.listPkm.TabIndex = 36;
             this.listPkm.UseCompatibleStateImageBehavior = false;
             this.listPkm.SelectedIndexChanged += new System.EventHandler(this.listPkm_SelectedIndexChanged);
@@ -88,7 +88,7 @@ namespace LoginProject
             // txtNum
             // 
             this.txtNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtNum.Location = new System.Drawing.Point(728, 239);
+            this.txtNum.Location = new System.Drawing.Point(712, 188);
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(195, 31);
             this.txtNum.TabIndex = 2;
@@ -96,7 +96,7 @@ namespace LoginProject
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(1052, 243);
+            this.txtName.Location = new System.Drawing.Point(1036, 192);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(195, 31);
             this.txtName.TabIndex = 1;
@@ -106,7 +106,7 @@ namespace LoginProject
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(948, 239);
+            this.label1.Location = new System.Drawing.Point(932, 188);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 33);
             this.label1.TabIndex = 31;
@@ -118,7 +118,7 @@ namespace LoginProject
             this.cbbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbType.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.cbbType.FormattingEnabled = true;
-            this.cbbType.Location = new System.Drawing.Point(728, 302);
+            this.cbbType.Location = new System.Drawing.Point(712, 251);
             this.cbbType.Margin = new System.Windows.Forms.Padding(2);
             this.cbbType.Name = "cbbType";
             this.cbbType.Size = new System.Drawing.Size(195, 33);
@@ -127,7 +127,7 @@ namespace LoginProject
             // txtHP
             // 
             this.txtHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtHP.Location = new System.Drawing.Point(1052, 367);
+            this.txtHP.Location = new System.Drawing.Point(1036, 316);
             this.txtHP.Name = "txtHP";
             this.txtHP.Size = new System.Drawing.Size(195, 31);
             this.txtHP.TabIndex = 49;
@@ -135,7 +135,7 @@ namespace LoginProject
             // txtAttack
             // 
             this.txtAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtAttack.Location = new System.Drawing.Point(1052, 305);
+            this.txtAttack.Location = new System.Drawing.Point(1036, 254);
             this.txtAttack.Name = "txtAttack";
             this.txtAttack.Size = new System.Drawing.Size(195, 31);
             this.txtAttack.TabIndex = 48;
@@ -143,7 +143,7 @@ namespace LoginProject
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.txtPrice.Location = new System.Drawing.Point(728, 367);
+            this.txtPrice.Location = new System.Drawing.Point(712, 316);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(195, 31);
             this.txtPrice.TabIndex = 52;
@@ -157,7 +157,7 @@ namespace LoginProject
             "1",
             "2",
             "3"});
-            this.txtGym.Location = new System.Drawing.Point(1052, 429);
+            this.txtGym.Location = new System.Drawing.Point(1036, 378);
             this.txtGym.Margin = new System.Windows.Forms.Padding(2);
             this.txtGym.Name = "txtGym";
             this.txtGym.Size = new System.Drawing.Size(195, 33);
@@ -171,7 +171,7 @@ namespace LoginProject
             this.txtEvolution.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.txtEvolution.Location = new System.Drawing.Point(728, 430);
+            this.txtEvolution.Location = new System.Drawing.Point(712, 379);
             this.txtEvolution.Margin = new System.Windows.Forms.Padding(2);
             this.txtEvolution.Name = "txtEvolution";
             this.txtEvolution.Size = new System.Drawing.Size(195, 33);
@@ -180,7 +180,7 @@ namespace LoginProject
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(1232, 12);
+            this.pictureBox10.Location = new System.Drawing.Point(1216, 12);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(15, 15);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -191,7 +191,7 @@ namespace LoginProject
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(1253, 12);
+            this.pictureBox9.Location = new System.Drawing.Point(1237, 12);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(15, 15);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -227,7 +227,7 @@ namespace LoginProject
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(638, 301);
+            this.label2.Location = new System.Drawing.Point(622, 250);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 33);
             this.label2.TabIndex = 67;
@@ -238,7 +238,7 @@ namespace LoginProject
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(939, 301);
+            this.label3.Location = new System.Drawing.Point(923, 250);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 33);
             this.label3.TabIndex = 68;
@@ -249,7 +249,7 @@ namespace LoginProject
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(985, 363);
+            this.label5.Location = new System.Drawing.Point(969, 312);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 33);
             this.label5.TabIndex = 69;
@@ -260,7 +260,7 @@ namespace LoginProject
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(634, 363);
+            this.label6.Location = new System.Drawing.Point(618, 312);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 33);
             this.label6.TabIndex = 70;
@@ -271,7 +271,7 @@ namespace LoginProject
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(596, 239);
+            this.label7.Location = new System.Drawing.Point(580, 188);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(117, 33);
             this.label7.TabIndex = 71;
@@ -282,7 +282,7 @@ namespace LoginProject
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(579, 427);
+            this.label8.Location = new System.Drawing.Point(563, 376);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(134, 33);
             this.label8.TabIndex = 72;
@@ -293,7 +293,7 @@ namespace LoginProject
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(964, 427);
+            this.label10.Location = new System.Drawing.Point(948, 376);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 33);
             this.label10.TabIndex = 73;
@@ -303,7 +303,7 @@ namespace LoginProject
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
             this.pictureBox7.Image = global::LoginProject.Properties.Resources.search;
-            this.pictureBox7.Location = new System.Drawing.Point(460, 196);
+            this.pictureBox7.Location = new System.Drawing.Point(460, 184);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(51, 37);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -313,7 +313,7 @@ namespace LoginProject
             // picPokemon
             // 
             this.picPokemon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picPokemon.Location = new System.Drawing.Point(1052, 522);
+            this.picPokemon.Location = new System.Drawing.Point(1036, 472);
             this.picPokemon.Name = "picPokemon";
             this.picPokemon.Size = new System.Drawing.Size(195, 162);
             this.picPokemon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -332,7 +332,7 @@ namespace LoginProject
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpload.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpload.ForeColor = System.Drawing.Color.White;
-            this.btnUpload.Location = new System.Drawing.Point(945, 657);
+            this.btnUpload.Location = new System.Drawing.Point(929, 607);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(92, 27);
             this.btnUpload.TabIndex = 76;
@@ -353,7 +353,7 @@ namespace LoginProject
             this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton3.ForeColor = System.Drawing.Color.White;
-            this.rjButton3.Location = new System.Drawing.Point(741, 753);
+            this.rjButton3.Location = new System.Drawing.Point(725, 659);
             this.rjButton3.Name = "rjButton3";
             this.rjButton3.Size = new System.Drawing.Size(150, 40);
             this.rjButton3.TabIndex = 64;
@@ -374,7 +374,7 @@ namespace LoginProject
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(919, 753);
+            this.rjButton2.Location = new System.Drawing.Point(903, 659);
             this.rjButton2.Name = "rjButton2";
             this.rjButton2.Size = new System.Drawing.Size(150, 40);
             this.rjButton2.TabIndex = 63;
@@ -395,7 +395,7 @@ namespace LoginProject
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(563, 753);
+            this.btnSave.Location = new System.Drawing.Point(547, 659);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(150, 40);
             this.btnSave.TabIndex = 62;
@@ -416,7 +416,7 @@ namespace LoginProject
             this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPurchase.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPurchase.ForeColor = System.Drawing.Color.White;
-            this.btnPurchase.Location = new System.Drawing.Point(1097, 753);
+            this.btnPurchase.Location = new System.Drawing.Point(1081, 659);
             this.btnPurchase.Name = "btnPurchase";
             this.btnPurchase.Size = new System.Drawing.Size(150, 40);
             this.btnPurchase.TabIndex = 61;
@@ -430,7 +430,7 @@ namespace LoginProject
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
-            this.ClientSize = new System.Drawing.Size(1280, 830);
+            this.ClientSize = new System.Drawing.Size(1264, 729);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.picPokemon);
             this.Controls.Add(this.pictureBox7);

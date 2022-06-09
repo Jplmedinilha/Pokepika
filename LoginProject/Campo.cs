@@ -49,6 +49,10 @@ namespace LoginProject
         {
             picCharacter.Visible = true;
             lblUsername.Visible = true;
+
+            if (Control.ModifierKeys == Keys.Tab)
+                flowLayoutPanel1.Enabled = false;
+
             if (Control.ModifierKeys == Keys.Shift)
             {
                 if (e.KeyCode == Keys.Left || e.KeyCode == Keys.A)
@@ -138,13 +142,17 @@ namespace LoginProject
           
             populateItems();
             flowLayoutPanel1.Enabled = false; // gambiarra para nao bugar o boneco
+            hideMenu();
 
         }
 
-        private void populateItems()
+        public void populateItems()
         {
-            List<Listitem> listItems = new List<Listitem>();
 
+            if (flowLayoutPanel1.Controls.Count > 0)
+                flowLayoutPanel1.Controls.Clear();
+          
+            List<Listitem> listItems = new List<Listitem>();
         
             Inventory inventory = new Inventory();
             inventory.getFullInventory(lblUsername.Text);
@@ -158,22 +166,51 @@ namespace LoginProject
                 lstItem.Type = inventory.leitura.GetString(1);
               
 
-                byte[] img = (byte[])inventory.leitura["getPokeImage(numPokemon)"];
+                byte[] img = (byte[])inventory.leitura["picture"];
 
                 MemoryStream ms = new MemoryStream(img);
                 lstItem.Icon = Image.FromStream(ms);
 
                 listItems.Add(lstItem);
 
-                if (flowLayoutPanel1.Controls.Count < 0)
-                     flowLayoutPanel1.Controls.Clear();
-                else
-                     flowLayoutPanel1.Controls.Add(lstItem);
-
-
+                flowLayoutPanel1.Controls.Add(lstItem);
             }
 
         }
+
+        private void showMenu()
+        {
+            panel1.Visible = true;
+            lblPokeLabel.Visible = true;
+            lblUser.Visible = true;
+            flowLayoutPanel1.Visible = true;
+            lblBalance.Visible = true;
+            btnCloseMenu.Visible = true;
+            picBag.Visible = false;
+            btnClose.Visible = false;
+            btnMin.Visible = false;
+            flowLayoutPanel1.Visible = true;
+            Size = new Size(1580, 679);
+            CenterToScreen();
+           
+        }
+
+        private void hideMenu()
+        {
+            
+            panel1.Visible = false;
+            lblPokeLabel.Visible = false;
+            lblUser.Visible = false;
+            flowLayoutPanel1.Visible = false;
+            btnCloseMenu.Visible = false;
+            lblBalance.Visible = false;
+            picBag.Visible = true;
+            btnClose.Visible = true;
+            btnMin.Visible = true;
+            Size = new Size(1244, 679);
+            CenterToScreen();
+        }
+
 
         private void moveTimerEvent(object sender, EventArgs e)
         {
@@ -281,6 +318,8 @@ namespace LoginProject
             if (positionX < 1210 && positionX > 1036 - speed && currPosY < 417 && currPosY > 273) able = false;//settings
 
             if (positionX < 972 && positionX > 846 - speed && currPosY < 567 && currPosY > 437) able = false;//market  
+            
+          
 
             return able;
 
@@ -321,6 +360,22 @@ namespace LoginProject
         {
             
           
+        }
+
+        private void picBag_Click(object sender, EventArgs e)
+        {
+            showMenu();
+
+        }
+
+        private void btnCloseMenu_Click(object sender, EventArgs e)
+        {
+            hideMenu();
+        }
+
+        private void flowLayoutPanel1_Enter(object sender, EventArgs e)
+        {
+            
         }
 
         private bool upAble()// ^^^
@@ -395,13 +450,18 @@ namespace LoginProject
             {
                 if (positionX >= 130 && positionX <= 155 && currPosY <= 397 && currPosY > 360) // markett
                 {
+                    
                     lblUsername.Top += 10; //volta o bicho pra
                     picCharacter.Top += 10; //volta o bicho pra fora
                     cleanMoves(); // faz parar de mover
                     admMenu menu = new admMenu(lblUsername.Text);
+                    populateItems();
                     menu.Show();
+
+                    hideMenu();
                     picCharacter.Visible = false;
                     lblUsername.Visible = false;
+
                 }
 
                 if (positionX >= 580 && positionX <= 595 && currPosY <= 130 && currPosY > 100) // markett
@@ -411,8 +471,8 @@ namespace LoginProject
                     cleanMoves(); // faz parar de move
 
                     // ############## GYM 1
-                    MessageBox.Show("Open gym 1"); 
-
+                    MessageBox.Show("Open gym 1");
+                    hideMenu();
                     picCharacter.Visible = false;
                     lblUsername.Visible = false;
                 }
@@ -424,8 +484,8 @@ namespace LoginProject
                     cleanMoves(); // faz parar de move
 
                     // ############## GYM 2
-                    MessageBox.Show("Open gym 2"); 
-
+                    MessageBox.Show("Open gym 2");
+                    hideMenu();
                     picCharacter.Visible = false;
                     lblUsername.Visible = false;
                 }
@@ -437,8 +497,8 @@ namespace LoginProject
                     cleanMoves(); // faz parar de move
 
                     // ############## GYM 3
-                    MessageBox.Show("Open gym 3"); 
-
+                    MessageBox.Show("Open gym 3");
+                    hideMenu();
                     picCharacter.Visible = false;
                     lblUsername.Visible = false;
                 }
@@ -451,7 +511,7 @@ namespace LoginProject
 
                     settingsMenu menu = new settingsMenu(lblUsername.Text);
                     menu.Show();
-
+                    hideMenu();
                     picCharacter.Visible = false;
                     lblUsername.Visible = false;
                 }
@@ -466,9 +526,12 @@ namespace LoginProject
                    Pokeshop pokeshop = new Pokeshop();
                     Hide();
                     pokeshop.ShowDialog();
+                    hideMenu();
+                    populateItems();
                     Show();
                     picCharacter.Visible = false;
                     lblUsername.Visible = false;
+                    
                 }
 
             }

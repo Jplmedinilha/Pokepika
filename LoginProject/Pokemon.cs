@@ -86,6 +86,37 @@ namespace LoginProject
 
         }
 
+        public bool updatePkmWithoutPic(int id, string name, string type, int attack, int hp, int price,
+            string hasEvolution, int gym)
+        {
+            cmd.CommandText = "UPDATE pokemon.pokemons SET name = @name, type = @type, attack = @attack, hp = @hp, " +
+                "price = @price, hasEvolution = @hasEvolution, gym = @gym WHERE numPokemon = @id ;";
+
+            cmd.Parameters.AddWithValue("@name", name);
+            cmd.Parameters.AddWithValue("@type", type);
+            cmd.Parameters.AddWithValue("@attack", attack);
+            cmd.Parameters.AddWithValue("@hp", hp);
+            cmd.Parameters.AddWithValue("@price", price);
+            cmd.Parameters.AddWithValue("@hasEvolution", hasEvolution);
+            cmd.Parameters.AddWithValue("@gym", gym);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            try
+            {
+                cmd.Connection = conn.connect();
+                cmd.ExecuteNonQuery();
+                conn.disconnect();
+                this.Message = "CERTO!";
+                return true;
+            }
+            catch (Exception ex)
+            {
+                this.Message = "Errado!" + ex;
+                return false;
+            }
+
+        }
+
         public void getTypes()
         {
             cmd.CommandText = "SELECT type FROM pokemon.types";

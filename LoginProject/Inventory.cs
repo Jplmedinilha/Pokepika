@@ -83,7 +83,7 @@ namespace LoginProject
 
         public bool getFullInventory(String username)
         {
-            cmd.CommandText = $"SELECT getPokemon(numPokemon), getPokeType(numPokemon), getPokeImage(numPokemon) FROM userpokemon where idUser = (SELECT idUser from `user` where username = '{username}');";
+            cmd.CommandText = $"SELECT `name`, `type`, `picture` from pokemon.pokemons as p INNER JOIN `userpokemon` as up ON p.numPokemon = up.numPokemon WHERE up.idUser = (SELECT idUser from `user` where username = '{username}');";
 
             try
             {

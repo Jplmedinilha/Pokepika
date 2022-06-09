@@ -154,6 +154,7 @@ namespace LoginProject
                 getPkm();
                 txtNum.ReadOnly = false;
 
+
             }
         }
 
@@ -199,21 +200,30 @@ namespace LoginProject
             }
             else if (btnSave.Text == "Update")
             {
-
+                bool verifica;
                 Pokemon pkm = new Pokemon();
                 if (txtName.Text == "" || txtNum.Text == "" || cbbType.Text == "" || txtAttack.Text == ""
                     || txtHP.Text == "" || txtPrice.Text == "" || txtEvolution.Text == "" || txtGym.Text == "")
                     MessageBox.Show("Insira as informações corretamente");
                 else
                 {
-                    byte[] img = null;
-                    FileStream Stream = new FileStream(imageLocation, FileMode.Open, FileAccess.Read);
-                    BinaryReader brs = new BinaryReader(Stream);
-                    img = brs.ReadBytes((int)Stream.Length);
+                    if (imageLocation == null)
+                    {
+                        verifica = pkm.updatePkmWithoutPic(id, txtName.Text, cbbType.Text,
+                           int.Parse(txtAttack.Text), int.Parse(txtHP.Text), int.Parse(txtPrice.Text),
+                           (txtEvolution.Text == "Yes") ? "Y" : "N", int.Parse(txtGym.Text));
+                    } else
+                    {
+                        byte[] img = null;
+                        FileStream Stream = new FileStream(imageLocation, FileMode.Open, FileAccess.Read);
+                        BinaryReader brs = new BinaryReader(Stream);
+                        img = brs.ReadBytes((int)Stream.Length);
 
-                    bool verifica = pkm.updatePkm(id, txtName.Text, cbbType.Text,
-                        int.Parse(txtAttack.Text), int.Parse(txtHP.Text), int.Parse(txtPrice.Text),
-                        (txtEvolution.Text == "Yes") ? "Y" : "N", int.Parse(txtGym.Text), img);
+                        verifica = pkm.updatePkm(id, txtName.Text, cbbType.Text,
+                            int.Parse(txtAttack.Text), int.Parse(txtHP.Text), int.Parse(txtPrice.Text),
+                            (txtEvolution.Text == "Yes") ? "Y" : "N", int.Parse(txtGym.Text), img);
+                    }
+                    
                     if (verifica)
                     {
                         limpar();
