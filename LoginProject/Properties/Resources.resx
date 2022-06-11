@@ -124,6 +124,12 @@
   <data name="categories" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\categories.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="eye_password" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eye-password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_coin_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-coin-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,10 +157,16 @@
   <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="view" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\view.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_004" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\004.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_23_aesthetic_purple_pokemon_wallpaper_25418499" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_23_aesthetic-purple-pokemon-wallpaper_25418499.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

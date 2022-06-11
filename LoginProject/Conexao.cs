@@ -11,10 +11,10 @@ namespace LoginProject
     {
         MySqlConnection con = new MySqlConnection();
 
-        string server = "localhost";
+        string server = "pokepika.c3qampssxtve.us-east-1.rds.amazonaws.com";
         string database = "pokemon";
-        string user = "root";
-        string pass = "Allahuakbar2016!";
+        string user = "ifspadm";
+        string pass = "Jplm12345!";
         string port = "3306";
         public Conexao()
         {

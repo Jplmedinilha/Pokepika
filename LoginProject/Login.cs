@@ -20,66 +20,14 @@ namespace LoginProject
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private static string username;
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            User user = new User();
-            MySqlDataReader leitura = user.getUser(txtUser.Text);
-
-            if(leitura.Read())
-            {
-                Hash hash = new Hash();
-                if (hash.VerificarSenha(txtPass.Text, leitura.GetString(0)))
-                {
-                    username = txtUser.Text;
-                    int isAdm = 0;
-
-                    if (user.isAdm(txtUser.Text))
-                    {
-                        isAdm = 1; //user adm
-                    }
-
-                    this.Hide();
-                    Campo form1 = new Campo(txtUser.Text, isAdm);
-                    //admMenu form1 = new admMenu(txtUser.Text);
-                    form1.Show();
-                 
-
-                }
-                else MessageBox.Show("Wrong Password!");
-            }
-            else
-            {
-                MessageBox.Show("User doesn't exists! Create a new one");
-            }
-        }
-
-        private void btnSalvar_Click_1(object sender, EventArgs e)
-        {
-            newUser form1 = new newUser();
-            form1.Show();
-        }
-
+      
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-        }
 
-        private void btnPass2_Click(object sender, EventArgs e)
-        {
-            if (txtPass.PasswordChar == '*')
-            {
-                txtPass.PasswordChar = '\0';
-                btnPass.Text = "Hide";
-            }
-            else
-            {
-                txtPass.PasswordChar = '*';
-                btnPass.Text = "Show";
-            }
         }
 
         private void lblForgot_Click(object sender, EventArgs e)
@@ -96,7 +44,7 @@ namespace LoginProject
 
         private void Login_KeyDown(object sender, KeyEventArgs e)
         {
-            
+
         }
 
         private void txtPass_KeyDown(object sender, KeyEventArgs e)
@@ -104,7 +52,7 @@ namespace LoginProject
             if (e.KeyCode == Keys.Enter)
             {
 
-                btnLogin_Click(this, new EventArgs());
+                rjButton2_Click(this, new EventArgs());
 
             }
         }
@@ -114,7 +62,7 @@ namespace LoginProject
             if (e.KeyCode == Keys.Enter)
             {
 
-                btnLogin_Click(this, new EventArgs());
+                rjButton2_Click(this, new EventArgs());
 
             }
         }
@@ -122,6 +70,65 @@ namespace LoginProject
         public static string getUsername()
         {
             return username;
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            User user = new User();
+            MySqlDataReader leitura = user.getUser(txtUser.Text);
+
+            if (leitura.Read())
+            {
+                Hash hash = new Hash();
+                if (hash.VerificarSenha(txtPass.Text, leitura.GetString(0)))
+                {
+                    username = txtUser.Text;
+                    int isAdm = 0;
+
+                    if (user.isAdm(txtUser.Text))
+                    {
+                        isAdm = 1; //user adm
+                    }
+
+                    this.Hide();
+                    Campo form1 = new Campo(txtUser.Text, isAdm);
+                    //admMenu form1 = new admMenu(txtUser.Text);
+                    form1.Show();
+
+
+                }
+                else MessageBox.Show("Wrong Password!");
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (txtPass.PasswordChar == '*')
+            {
+                txtPass.PasswordChar = '\0';
+                picPass.Image = Properties.Resources.view;
+            }
+            else
+            {
+                txtPass.PasswordChar = '*';
+                picPass.Image = Properties.Resources.hide;
+            }
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            newUser form1 = new newUser();
+            form1.Show();
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

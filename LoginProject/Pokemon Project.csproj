@@ -295,5 +295,26 @@
   <ItemGroup>
     <None Include="Resources\mochila.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2837921869.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_23_aesthetic-purple-pokemon-wallpaper_25418499.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-olho-fechado-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-visível-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye-password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

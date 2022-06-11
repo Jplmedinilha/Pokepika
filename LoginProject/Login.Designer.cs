@@ -29,121 +29,207 @@ namespace LoginProject
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnPass = new System.Windows.Forms.Button();
             this.lblForgot = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.picPass = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rjButton1 = new Market.Style.RJButton();
+            this.rjButton2 = new Market.Style.RJButton();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUser
             // 
-            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(110, 39);
+            this.txtUser.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.ForeColor = System.Drawing.Color.Gray;
+            this.txtUser.Location = new System.Drawing.Point(84, 320);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(241, 29);
+            this.txtUser.Size = new System.Drawing.Size(284, 37);
             this.txtUser.TabIndex = 0;
             this.txtUser.Text = "ADM";
             this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             // 
             // txtPass
             // 
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(110, 98);
+            this.txtPass.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold);
+            this.txtPass.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPass.Location = new System.Drawing.Point(84, 376);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(193, 29);
+            this.txtPass.Size = new System.Drawing.Size(284, 37);
             this.txtPass.TabIndex = 1;
             this.txtPass.Text = "ADM";
             this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
             // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(147, 169);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(104, 46);
-            this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.AutoSize = true;
-            this.btnSalvar.ForeColor = System.Drawing.Color.Blue;
-            this.btnSalvar.Location = new System.Drawing.Point(265, 247);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(112, 13);
-            this.btnSalvar.TabIndex = 4;
-            this.btnSalvar.Text = "Create a new account";
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click_1);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Username";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 109);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Password";
-            // 
-            // btnPass
-            // 
-            this.btnPass.Location = new System.Drawing.Point(328, 98);
-            this.btnPass.Name = "btnPass";
-            this.btnPass.Size = new System.Drawing.Size(49, 29);
-            this.btnPass.TabIndex = 19;
-            this.btnPass.Text = "Show";
-            this.btnPass.UseVisualStyleBackColor = true;
-            this.btnPass.Click += new System.EventHandler(this.btnPass2_Click);
-            // 
             // lblForgot
             // 
             this.lblForgot.AutoSize = true;
-            this.lblForgot.ForeColor = System.Drawing.Color.Blue;
-            this.lblForgot.Location = new System.Drawing.Point(265, 271);
+            this.lblForgot.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgot.ForeColor = System.Drawing.Color.White;
+            this.lblForgot.Location = new System.Drawing.Point(274, 416);
             this.lblForgot.Name = "lblForgot";
-            this.lblForgot.Size = new System.Drawing.Size(86, 13);
+            this.lblForgot.Size = new System.Drawing.Size(94, 13);
             this.lblForgot.TabIndex = 20;
             this.lblForgot.Text = "Forgot Password";
             this.lblForgot.Click += new System.EventHandler(this.lblForgot_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox10);
+            this.panel1.Controls.Add(this.pictureBox9);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Location = new System.Drawing.Point(444, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(816, 701);
+            this.panel1.TabIndex = 23;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::LoginProject.Properties.Resources._23_aesthetic_purple_pokemon_wallpaper_25418499;
+            this.pictureBox2.Location = new System.Drawing.Point(-325, -292);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1266, 1252);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 24;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
+            this.panel2.Controls.Add(this.rjButton1);
+            this.panel2.Controls.Add(this.picPass);
+            this.panel2.Controls.Add(this.rjButton2);
+            this.panel2.Controls.Add(this.lblForgot);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.txtUser);
+            this.panel2.Controls.Add(this.txtPass);
+            this.panel2.Location = new System.Drawing.Point(-1, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(447, 701);
+            this.panel2.TabIndex = 24;
+            // 
+            // picPass
+            // 
+            this.picPass.Image = global::LoginProject.Properties.Resources.hide;
+            this.picPass.Location = new System.Drawing.Point(388, 376);
+            this.picPass.Name = "picPass";
+            this.picPass.Size = new System.Drawing.Size(32, 37);
+            this.picPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPass.TabIndex = 23;
+            this.picPass.TabStop = false;
+            this.picPass.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
+            this.pictureBox1.Image = global::LoginProject.Properties.Resources.pokemon_logo_8;
+            this.pictureBox1.Location = new System.Drawing.Point(120, 97);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(177, 169);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 20;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(84, 485);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(128, 40);
+            this.rjButton1.TabIndex = 24;
+            this.rjButton1.Text = "Sign Up";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
+            // 
+            // rjButton2
+            // 
+            this.rjButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton2.BorderRadius = 20;
+            this.rjButton2.BorderSize = 0;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.rjButton2.ForeColor = System.Drawing.Color.White;
+            this.rjButton2.Location = new System.Drawing.Point(240, 485);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Size = new System.Drawing.Size(128, 40);
+            this.rjButton2.TabIndex = 0;
+            this.rjButton2.Text = "Login";
+            this.rjButton2.TextColor = System.Drawing.Color.White;
+            this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(100)))), ((int)(((byte)(174)))));
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(759, 12);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 26;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(172)))), ((int)(((byte)(239)))));
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(789, 12);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 25;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 319);
-            this.Controls.Add(this.lblForgot);
-            this.Controls.Add(this.btnPass);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.txtUser);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.ClientSize = new System.Drawing.Size(1260, 700);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Login_KeyPress);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -151,12 +237,16 @@ namespace LoginProject
 
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Label btnSalvar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnPass;
         private System.Windows.Forms.Label lblForgot;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel2;
+        private Market.Style.RJButton rjButton2;
+        private System.Windows.Forms.PictureBox picPass;
+        private Market.Style.RJButton rjButton1;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }
 
