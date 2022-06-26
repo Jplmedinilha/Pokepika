@@ -58,7 +58,6 @@ namespace LoginProject
             this.rjButton3 = new Market.Style.RJButton();
             this.rjButton2 = new Market.Style.RJButton();
             this.btnSave = new Market.Style.RJButton();
-            this.btnPurchase = new Market.Style.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -180,7 +179,7 @@ namespace LoginProject
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(1216, 12);
+            this.pictureBox10.Location = new System.Drawing.Point(1206, 12);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(15, 15);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -215,7 +214,7 @@ namespace LoginProject
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
             this.pictureBox1.Image = global::LoginProject.Properties.Resources.pokemon_logo_8;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(37, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -276,6 +275,7 @@ namespace LoginProject
             this.label7.Size = new System.Drawing.Size(117, 33);
             this.label7.TabIndex = 71;
             this.label7.Text = "Number";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -353,7 +353,7 @@ namespace LoginProject
             this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton3.ForeColor = System.Drawing.Color.White;
-            this.rjButton3.Location = new System.Drawing.Point(725, 659);
+            this.rjButton3.Location = new System.Drawing.Point(890, 659);
             this.rjButton3.Name = "rjButton3";
             this.rjButton3.Size = new System.Drawing.Size(150, 40);
             this.rjButton3.TabIndex = 64;
@@ -374,7 +374,7 @@ namespace LoginProject
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(903, 659);
+            this.rjButton2.Location = new System.Drawing.Point(1080, 659);
             this.rjButton2.Name = "rjButton2";
             this.rjButton2.Size = new System.Drawing.Size(150, 40);
             this.rjButton2.TabIndex = 63;
@@ -395,7 +395,7 @@ namespace LoginProject
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(547, 659);
+            this.btnSave.Location = new System.Drawing.Point(700, 659);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(150, 40);
             this.btnSave.TabIndex = 62;
@@ -403,27 +403,6 @@ namespace LoginProject
             this.btnSave.TextColor = System.Drawing.Color.White;
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.rjButton1_Click);
-            // 
-            // btnPurchase
-            // 
-            this.btnPurchase.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPurchase.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPurchase.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnPurchase.BorderRadius = 20;
-            this.btnPurchase.BorderSize = 0;
-            this.btnPurchase.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPurchase.FlatAppearance.BorderSize = 0;
-            this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPurchase.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPurchase.ForeColor = System.Drawing.Color.White;
-            this.btnPurchase.Location = new System.Drawing.Point(1081, 659);
-            this.btnPurchase.Name = "btnPurchase";
-            this.btnPurchase.Size = new System.Drawing.Size(150, 40);
-            this.btnPurchase.TabIndex = 61;
-            this.btnPurchase.Text = "Close";
-            this.btnPurchase.TextColor = System.Drawing.Color.White;
-            this.btnPurchase.UseVisualStyleBackColor = false;
-            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
             // pkmManagement
             // 
@@ -446,7 +425,6 @@ namespace LoginProject
             this.Controls.Add(this.rjButton3);
             this.Controls.Add(this.rjButton2);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnPurchase);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.txtEvolution);
@@ -489,7 +467,6 @@ namespace LoginProject
         private System.Windows.Forms.ComboBox txtEvolution;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private Market.Style.RJButton btnPurchase;
         private Market.Style.RJButton btnSave;
         private Market.Style.RJButton rjButton2;
         private Market.Style.RJButton rjButton3;

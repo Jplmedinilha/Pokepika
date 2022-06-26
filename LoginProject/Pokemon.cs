@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace LoginProject
@@ -43,12 +44,12 @@ namespace LoginProject
                 cmd.Connection = conn.connect();
                 cmd.ExecuteNonQuery();
                 conn.disconnect();
-                this.Message = "Create success";
+                this.Message = "Sucess";
                 return true;
             }
             catch (Exception ex)
             {
-                this.Message = "Error! " + ex;
+                Message = "This Pokemon already exists!";
                 return false;
             }
 

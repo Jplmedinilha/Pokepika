@@ -19,56 +19,67 @@ namespace LoginProject
             InitializeComponent();
 
             username = name;
+        }     
+
+   
+
+        
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void pictureBox9_Click(object sender, EventArgs e)
         {
-            if (txtCurrPass.PasswordChar == '*')
-            {
-                txtCurrPass.PasswordChar = '\0';
-                button2.Text = "Hide";
-            }
-            else
-            {
-                txtCurrPass.PasswordChar = '*';
-                button2.Text = "Show";
-            }
+            Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void picPass2_Click(object sender, EventArgs e)
         {
+
             if (txtNewPass1.PasswordChar == '*')
             {
                 txtNewPass1.PasswordChar = '\0';
-                button1.Text = "Hide";
+                picPass2.Image = Properties.Resources.view;
             }
             else
             {
                 txtNewPass1.PasswordChar = '*';
-                button1.Text = "Show";
+                picPass2.Image = Properties.Resources.hide;
             }
         }
 
-        private void btnPass1_Click(object sender, EventArgs e)
+        private void picPass1_Click(object sender, EventArgs e)
+        {
+
+            if (txtCurrPass.PasswordChar == '*')
+            {
+                txtCurrPass.PasswordChar = '\0';
+                picPass1.Image = Properties.Resources.view;
+            }
+            else
+            {
+                txtCurrPass.PasswordChar = '*';
+                picPass1.Image = Properties.Resources.hide;
+            }
+        }
+
+        private void picPass3_Click(object sender, EventArgs e)
         {
             if (txtNewPass2.PasswordChar == '*')
             {
                 txtNewPass2.PasswordChar = '\0';
-                btnPass1.Text = "Hide";
+                picPass3.Image = Properties.Resources.view;
             }
             else
             {
                 txtNewPass2.PasswordChar = '*';
-                btnPass1.Text = "Show";
+                picPass3.Image = Properties.Resources.hide;
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
             User user = new User();
             MySqlDataReader leitura = user.getUser(username);
@@ -80,7 +91,7 @@ namespace LoginProject
                 {
                     //curr pw correta
 
-                    if(txtNewPass1.Text == txtNewPass2.Text)
+                    if (txtNewPass1.Text == txtNewPass2.Text)
                     {
                         Hash pass = new Hash();
                         string newpass = pass.CriptografarSenha(txtNewPass1.Text);
@@ -112,5 +123,7 @@ namespace LoginProject
                 MessageBox.Show("User doesn't exists! Create a new one");
             }
         }
+
+     
     }
 }

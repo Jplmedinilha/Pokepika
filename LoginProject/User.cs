@@ -20,15 +20,18 @@ namespace LoginProject
         public String Message = ""; //retorna mensagem (Iremos usar por enquanto)
         public MySqlDataReader leitura; //variavel tipo MSDATAREADER
 
-        public bool CreateUser(string name, string username, string password)
+        public bool CreateUser(string name, string username, string password, string isAdm, int balance)
         {
             Hash hash = new Hash();
             string newpass = hash.CriptografarSenha(password);
 
-            cmd.CommandText = "INSERT INTO `pokemon`.`user` (`name`, `username`, `password`) VALUES (@name, @username, @password);";
+            cmd.CommandText = "INSERT INTO `pokemon`.`user` (`name`, `username`, `password`, `isAdm`, `balance`) " +
+                "VALUES (@name, @username, @password, @isAdm, @balance);";
             cmd.Parameters.AddWithValue("@name", name);
             cmd.Parameters.AddWithValue("@username", username);
             cmd.Parameters.AddWithValue("@password", newpass);
+            cmd.Parameters.AddWithValue("@isAdm", isAdm);
+            cmd.Parameters.AddWithValue("@balance", balance);
 
             try
             {
@@ -40,10 +43,39 @@ namespace LoginProject
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex);
+                Message = "This user already exists!";
                 return false;
             }
             
+        }
+
+
+        public bool CreateDefaultUser(string name, string username, string password)
+        {
+            Hash hash = new Hash();
+            string newpass = hash.CriptografarSenha(password);
+
+            cmd.CommandText = "INSERT INTO `pokemon`.`user` (`name`, `username`, `password`) " +
+                "VALUES (@name, @username, @password);";
+            cmd.Parameters.AddWithValue("@name", name);
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.Parameters.AddWithValue("@password", newpass);
+          
+
+            try
+            {
+                cmd.Connection = conn.connect();
+                cmd.ExecuteNonQuery();
+                conn.disconnect();
+                this.Message = "Create success";
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Message = "This user already exists!";
+                return false;
+            }
+
         }
 
         public bool UpdateUser(int id, string name, string username, string isAdm, int balance)
@@ -189,7 +221,7 @@ namespace LoginProject
         public bool updateBalance(string username, int price)
         {
             cmd.Parameters.Clear();
-            cmd.CommandText = "UPDATE pokemon.user SET balance = balance - @price where username = @username;";
+            cmd.CommandText = "CALL updateBalance(@price, @username);";
 
             cmd.Parameters.AddWithValue("@price", price);
             cmd.Parameters.AddWithValue("@username", username);

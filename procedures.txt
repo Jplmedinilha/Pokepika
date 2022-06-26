@@ -1,0 +1,34 @@
+
+DELIMITER $$
+CREATE PROCEDURE `deletePokemon`(IN idPokemon INT)
+   BEGIN
+		
+        DELETE FROM userpokemon where numPokemon = idPokemon;
+        
+        DELETE FROM pokemon.pokemons WHERE numPokemon = idPokemon;
+        
+    END $$
+
+
+DELIMITER $$
+CREATE  PROCEDURE `deleteUser`(IN id_user INT)
+BEGIN
+		
+        DELETE FROM userpokemon where idUser = id_user;
+        
+        DELETE FROM pokemon.`user` WHERE idUser = id_user;
+        
+  
+END $$
+
+
+DELIMITER $$
+CREATE PROCEDURE updateBalance(IN price INT, IN userName varchar(45))
+BEGIN
+	UPDATE pokemon.user 
+    SET balance = balance - price
+    WHERE username = userNAme;
+END  $$
+
+
+

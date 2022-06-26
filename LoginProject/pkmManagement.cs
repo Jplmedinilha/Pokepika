@@ -138,12 +138,7 @@ namespace LoginProject
             WindowState = FormWindowState.Minimized;
         }
 
-        private void btnPurchase_Click(object sender, EventArgs e) // real
-        {
-            this.Hide();
-            admMenu Menu = new admMenu(username);
-            Menu.Show();
-        }
+   
 
         private void rjButton3_Click(object sender, EventArgs e) //real
         {
@@ -167,77 +162,85 @@ namespace LoginProject
 
         private void rjButton1_Click(object sender, EventArgs e) // real
         {
-            if (btnSave.Text == "Create")
+           try
             {
-                Pokemon pkm = new Pokemon();
-                if (txtName.Text == "" || txtNum.Text == "" || cbbType.Text == "" || txtAttack.Text == ""
-                    || txtHP.Text == "" || txtPrice.Text == "" || txtEvolution.Text == "" || txtGym.Text == "" || picPokemon == null)
-                    MessageBox.Show("Insira as informações corretamente");
-                else
+                if (btnSave.Text == "Create")
                 {
-                    byte[] img = null;
-                    FileStream Stream = new FileStream(imageLocation, FileMode.Open, FileAccess.Read);
-                    BinaryReader brs = new BinaryReader(Stream);
-                    img = brs.ReadBytes((int)Stream.Length);
-                    //(string name, int num, string type, int attack, int hp, int price, string hasEvolution, int gym)
-                    bool verifica = pkm.createPkm(txtName.Text, int.Parse(txtNum.Text), cbbType.Text,
-                        int.Parse(txtAttack.Text), int.Parse(txtHP.Text), int.Parse(txtPrice.Text),
-                        (txtEvolution.Text == "Yes") ? "Y" : "N", int.Parse(txtGym.Text), img);
-
-                    if (verifica)
-                    {
-                        limpar();
-                        getPkm();
-                        MessageBox.Show(pkm.Message);
-                    }
+                    Pokemon pkm = new Pokemon();
+                    if (imageLocation == null || txtName.Text == "" || txtNum.Text == "" || cbbType.Text == "" || txtAttack.Text == ""
+                        || txtHP.Text == "" || txtPrice.Text == "" || txtEvolution.Text == "" || txtGym.Text == "" || picPokemon == null)
+                        MessageBox.Show("Please fill in all fields");
                     else
-                    {
-                        MessageBox.Show(pkm.Message);
-                    }
-
-
-                }
-            }
-            else if (btnSave.Text == "Update")
-            {
-                bool verifica;
-                Pokemon pkm = new Pokemon();
-                if (txtName.Text == "" || txtNum.Text == "" || cbbType.Text == "" || txtAttack.Text == ""
-                    || txtHP.Text == "" || txtPrice.Text == "" || txtEvolution.Text == "" || txtGym.Text == "")
-                    MessageBox.Show("Insira as informações corretamente");
-                else
-                {
-                    if (imageLocation == null)
-                    {
-                        verifica = pkm.updatePkmWithoutPic(id, txtName.Text, cbbType.Text,
-                           int.Parse(txtAttack.Text), int.Parse(txtHP.Text), int.Parse(txtPrice.Text),
-                           (txtEvolution.Text == "Yes") ? "Y" : "N", int.Parse(txtGym.Text));
-                    } else
                     {
                         byte[] img = null;
                         FileStream Stream = new FileStream(imageLocation, FileMode.Open, FileAccess.Read);
                         BinaryReader brs = new BinaryReader(Stream);
                         img = brs.ReadBytes((int)Stream.Length);
-
-                        verifica = pkm.updatePkm(id, txtName.Text, cbbType.Text,
+                       
+                        bool verifica = pkm.createPkm(txtName.Text, int.Parse(txtNum.Text), cbbType.Text,
                             int.Parse(txtAttack.Text), int.Parse(txtHP.Text), int.Parse(txtPrice.Text),
                             (txtEvolution.Text == "Yes") ? "Y" : "N", int.Parse(txtGym.Text), img);
-                    }
-                    
-                    if (verifica)
-                    {
-                        limpar();
-                        getPkm();
-                        MessageBox.Show(pkm.Message);
-                        btnSave.Text = "Create";
-                        txtNum.ReadOnly = false;
-                    }
-                    else
-                    {
-                        MessageBox.Show(pkm.Message);
+
+                        if (verifica)
+                        {
+                            limpar();
+                            getPkm();
+                            MessageBox.Show(pkm.Message);
+                        }
+                        else
+                        {
+                            limpar();
+                            MessageBox.Show(pkm.Message);
+                        }
+
+
                     }
                 }
+                else if (btnSave.Text == "Update")
+                {
+                    bool verifica;
+                    Pokemon pkm = new Pokemon();
+                    if (txtName.Text == "" || txtNum.Text == "" || cbbType.Text == "" || txtAttack.Text == ""
+                        || txtHP.Text == "" || txtPrice.Text == "" || txtEvolution.Text == "" || txtGym.Text == "")
+                        MessageBox.Show("Please fill in all fields");
+                    else
+                    {
+                        if (imageLocation == null)
+                        {
+                            verifica = pkm.updatePkmWithoutPic(id, txtName.Text, cbbType.Text,
+                               int.Parse(txtAttack.Text), int.Parse(txtHP.Text), int.Parse(txtPrice.Text),
+                               (txtEvolution.Text == "Yes") ? "Y" : "N", int.Parse(txtGym.Text));
+                        }
+                        else
+                        {
+                            byte[] img = null;
+                            FileStream Stream = new FileStream(imageLocation, FileMode.Open, FileAccess.Read);
+                            BinaryReader brs = new BinaryReader(Stream);
+                            img = brs.ReadBytes((int)Stream.Length);
 
+                            verifica = pkm.updatePkm(id, txtName.Text, cbbType.Text,
+                                int.Parse(txtAttack.Text), int.Parse(txtHP.Text), int.Parse(txtPrice.Text),
+                                (txtEvolution.Text == "Yes") ? "Y" : "N", int.Parse(txtGym.Text), img);
+                        }
+
+                        if (verifica)
+                        {
+                            limpar();
+                            getPkm();
+                            MessageBox.Show(pkm.Message);
+                            btnSave.Text = "Create";
+                            txtNum.ReadOnly = false;
+                        }
+                        else
+                        {
+                            MessageBox.Show(pkm.Message);
+                        }
+                    }
+
+                } 
+            } catch (FormatException ex)
+            {
+                MessageBox.Show("ERROR: Incorrect Input type");
             }
         }
 
@@ -264,6 +267,9 @@ namespace LoginProject
 
         }
 
-       
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

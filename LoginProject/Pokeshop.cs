@@ -93,7 +93,7 @@ namespace LoginProject
 
             } else
             {
-                MessageBox.Show("selecione um");
+                MessageBox.Show("Please choose one Pokemon");
             }
             
         }

@@ -17,19 +17,13 @@ namespace LoginProject
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {   
-            
-            if(txtPass.Text == txtPass2.Text)
+            if (txtPass.Text == txtPass2.Text)
             {
 
                 User user = new User();
-                bool verifica = user.CreateUser(txtName.Text, txtUsername.Text, txtPass.Text);
+                bool verifica = user.CreateDefaultUser(txtName.Text, txtUsername.Text, txtPass.Text);
                 if (verifica)
                 {
                     txtPass.Clear();
@@ -47,39 +41,46 @@ namespace LoginProject
             }
             else
             {
-                MessageBox.Show("Revise sua nova senha!");
+                MessageBox.Show("Incorrect Password!");
             }
-
-            
         }
 
-        private void btnPass1_Click(object sender, EventArgs e)
-        {   
-            if(txtPass.PasswordChar == '*')
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void picPass1_Click(object sender, EventArgs e)
+        {
+            if (txtPass.PasswordChar == '*')
             {
                 txtPass.PasswordChar = '\0';
-                btnPass1.Text = "Hide";
+                picPass1.Image = Properties.Resources.view;
             }
             else
             {
                 txtPass.PasswordChar = '*';
-                btnPass1.Text = "Show";
+                picPass1.Image = Properties.Resources.hide;
             }
-            
         }
 
-        private void btnPass2_Click(object sender, EventArgs e)
+        private void picPass2_Click(object sender, EventArgs e)
         {
-            if (txtPass2.PasswordChar == '*')
+            if (txtPass.PasswordChar == '*')
             {
                 txtPass2.PasswordChar = '\0';
-                btnPass2.Text = "Hide";
+                picPass2.Image = Properties.Resources.view;
             }
             else
             {
                 txtPass2.PasswordChar = '*';
-                btnPass2.Text = "Show";
+                picPass2.Image = Properties.Resources.hide;
             }
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

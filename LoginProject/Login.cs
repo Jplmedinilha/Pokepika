@@ -34,7 +34,8 @@ namespace LoginProject
         {
             this.Hide();
             PwRecovery recovery = new PwRecovery();
-            recovery.Show();
+            recovery.ShowDialog();
+            this.Show();
         }
 
         private void Login_KeyPress(object sender, KeyPressEventArgs e)
@@ -74,30 +75,39 @@ namespace LoginProject
 
         private void rjButton2_Click(object sender, EventArgs e)
         {
-            User user = new User();
-            MySqlDataReader leitura = user.getUser(txtUser.Text);
-
-            if (leitura.Read())
+            try
             {
-                Hash hash = new Hash();
-                if (hash.VerificarSenha(txtPass.Text, leitura.GetString(0)))
+                User user = new User();
+                MySqlDataReader leitura = user.getUser(txtUser.Text);
+
+                if (leitura.Read())
                 {
-                    username = txtUser.Text;
-                    int isAdm = 0;
-
-                    if (user.isAdm(txtUser.Text))
+                    Hash hash = new Hash();
+                    if (hash.VerificarSenha(txtPass.Text, leitura.GetString(0)))
                     {
-                        isAdm = 1; //user adm
+                        username = txtUser.Text;
+                        int isAdm = 0;
+
+                        if (user.isAdm(txtUser.Text))
+                        {
+                            isAdm = 1; //user adm
+                        }
+
+                        this.Hide();
+                        Campo form1 = new Campo(txtUser.Text, isAdm);
+
+                        form1.ShowDialog();
+                        Show();
+
                     }
-
-                    this.Hide();
-                    Campo form1 = new Campo(txtUser.Text, isAdm);
-                    //admMenu form1 = new admMenu(txtUser.Text);
-                    form1.Show();
-
-
+                    else MessageBox.Show("Wrong Password!");
+                } else
+                {
+                    MessageBox.Show("User doesn't exists! Please Sign up.");
                 }
-                else MessageBox.Show("Wrong Password!");
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

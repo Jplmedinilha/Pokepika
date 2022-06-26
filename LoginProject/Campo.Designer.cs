@@ -147,6 +147,7 @@ namespace LoginProject
             this.flowLayoutPanel1.Size = new System.Drawing.Size(317, 404);
             this.flowLayoutPanel1.TabIndex = 76;
             this.flowLayoutPanel1.TabStop = true;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             this.flowLayoutPanel1.Enter += new System.EventHandler(this.flowLayoutPanel1_Enter);
             // 
             // picLogo
@@ -319,7 +320,7 @@ namespace LoginProject
             // 
             this.btnMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnMin.Image = ((System.Drawing.Image)(resources.GetObject("btnMin.Image")));
-            this.btnMin.Location = new System.Drawing.Point(1192, 12);
+            this.btnMin.Location = new System.Drawing.Point(1185, 12);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(15, 15);
             this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

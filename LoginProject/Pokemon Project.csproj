@@ -316,5 +316,29 @@
   <ItemGroup>
     <None Include="Resources\hide.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokeball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\types.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\initalbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokeball2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset-password.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -117,6 +117,7 @@
             // 
             // picPokemon
             // 
+            this.picPokemon.Image = global::LoginProject.Properties.Resources.pokeball2;
             this.picPokemon.Location = new System.Drawing.Point(41, 183);
             this.picPokemon.Name = "picPokemon";
             this.picPokemon.Size = new System.Drawing.Size(423, 243);

@@ -18,47 +18,30 @@ namespace LoginProject
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (txtNewPass1.PasswordChar == '*')
-            {
-                txtNewPass1.PasswordChar = '\0';
-                btnPw1.Text = "Hide";
-            }
-            else
-            {
-                txtNewPass1.PasswordChar = '*';
-                btnPw1.Text = "Show";
-            }
-        }
-
-        private void btnPass1_Click(object sender, EventArgs e)
-        {
-            if (txtNewPass2.PasswordChar == '*')
-            {
-                txtNewPass2.PasswordChar = '\0';
-                btnPw2.Text = "Hide";
-            }
-            else
-            {
-                txtNewPass2.PasswordChar = '*';
-                btnPw2.Text = "Show";
-            }
-        }
-
+        
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
             Login log = new Login();
             log.Show();
+        }        
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
             User user = new User();
             MySqlDataReader leitura = user.getUser(txtUsername.Text);
@@ -88,6 +71,34 @@ namespace LoginProject
             else
             {
                 MessageBox.Show("User doesn't exists!");
+            }
+        }
+
+        private void picPass1_Click(object sender, EventArgs e)
+        {
+            if (txtNewPass1.PasswordChar == '*')
+            {
+                txtNewPass1.PasswordChar = '\0';
+                picPass1.Image = Properties.Resources.view;
+            }
+            else
+            {
+                txtNewPass1.PasswordChar = '*';
+                picPass1.Image = Properties.Resources.hide;
+            }
+        }
+
+        private void picPass2_Click_1(object sender, EventArgs e)
+        {
+            if (txtNewPass2.PasswordChar == '*')
+            {
+                txtNewPass2.PasswordChar = '\0';
+                picPass2.Image = Properties.Resources.view;
+            }
+            else
+            {
+                txtNewPass2.PasswordChar = '*';
+                picPass2.Image = Properties.Resources.hide;
             }
         }
     }

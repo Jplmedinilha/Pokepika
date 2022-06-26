@@ -113,7 +113,7 @@ namespace LoginProject
 
             }
 
-            flowLayoutPanel1.Enabled = false;// gambiarra para nao bugar o boneco
+            flowLayoutPanel1.Enabled = false;
         }
 
         private void Campo_KeyUp(object sender, KeyEventArgs e)
@@ -134,21 +134,21 @@ namespace LoginProject
             {
                 moveDown = false;
             }
-            flowLayoutPanel1.Enabled = true;// gambiarra para nao bugar o boneco
+            flowLayoutPanel1.Enabled = true;
         }
 
         private void Campo_Load(object sender, EventArgs e)
         {
           
             populateItems();
-            flowLayoutPanel1.Enabled = false; // gambiarra para nao bugar o boneco
+            flowLayoutPanel1.Enabled = false; 
             hideMenu();
 
         }
 
         public void populateItems()
         {
-
+            updateCoins();
             if (flowLayoutPanel1.Controls.Count > 0)
                 flowLayoutPanel1.Controls.Clear();
           
@@ -378,6 +378,11 @@ namespace LoginProject
             
         }
 
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private bool upAble()// ^^^
         {
             int positionX = picCharacter.Left;
@@ -454,13 +459,17 @@ namespace LoginProject
                     lblUsername.Top += 10; //volta o bicho pra
                     picCharacter.Top += 10; //volta o bicho pra fora
                     cleanMoves(); // faz parar de mover
-                    admMenu menu = new admMenu(lblUsername.Text);
-                    populateItems();
-                    menu.Show();
 
+                    this.Hide();
+                    admMenu menu = new admMenu(lblUsername.Text);
+                   
+                    menu.ShowDialog();
                     hideMenu();
+                    populateItems();
+                    Show();
                     picCharacter.Visible = false;
                     lblUsername.Visible = false;
+
 
                 }
 
@@ -510,10 +519,19 @@ namespace LoginProject
                     cleanMoves(); // faz parar de move
 
                     settingsMenu menu = new settingsMenu(lblUsername.Text);
-                    menu.Show();
+                    Hide();
+                    menu.ShowDialog();
                     hideMenu();
-                    picCharacter.Visible = false;
-                    lblUsername.Visible = false;
+
+                    if (menu.Logoff)
+                        Close();
+                    else
+                    {
+                        Show();
+                        picCharacter.Visible = false;
+                        lblUsername.Visible = false;
+                    }
+               
                 }
 
                 if (positionX >= 910 && positionX <= 935 && currPosY <= 575 && currPosY > 540) // markett

@@ -43,68 +43,11 @@ namespace LoginProject
             txtName.Text = "";
             txtUsername.Text = "";
             txtPassword.Text = "";
-            btnSave.Text = "Create";
+            btnSalvar.Text = "Create";
             txtPassword.ReadOnly = false;
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            
-            if(btnSave.Text == "Create")
-            {
-                User user = new User();
-                if (txtName.Text == "" || txtUsername.Text == "" || txtPassword.Text == "")
-                    MessageBox.Show("Insira as informações corretamente");
-                else
-                {
-                    bool verifica = user.CreateUser(txtName.Text, txtUsername.Text, txtPassword.Text);
-                    if (verifica)
-                    {
-                        limpar();
-                        getUser();
-                        MessageBox.Show(user.Message);
-                    }
-                    else
-                    {
-                        MessageBox.Show(user.Message);
-                    }
-                }
-            }
-            else if(btnSave.Text == "Update")
-            {
-
-                User user = new User();
-                if(txtPassword.Text != "")
-                {
-                    MessageBox.Show("Impossivel alterar senha");
-                }
-                else if (txtName.Text == "" || txtUsername.Text == "")
-                    MessageBox.Show("Insira as informações corretamente");
-                else
-                {
-                    string isAdm;
-                    if (txtAdm.Text == "Yes")
-                        isAdm = "Y";
-                    else
-                        isAdm = "N";
-
-                    bool verifica = user.UpdateUser(id, txtName.Text, txtUsername.Text, isAdm, int.Parse(txtBalance.Text));
-
-                    if (verifica)
-                    {
-                        limpar();
-                        getUser();
-                        MessageBox.Show(user.Message);
-                    }
-                    else
-                    {
-                        MessageBox.Show(user.Message);
-                    }
-                }
-
-            }
-
-        }
+        
         public void getUser()
         {
             listUsers.Items.Clear();
@@ -137,7 +80,7 @@ namespace LoginProject
             txtName.Text = nome;
             txtUsername.Text = username;
             txtAdm.Text = (adm == "Y") ? "Yes" : "No";
-            btnSave.Text = "Update";
+            btnSalvar.Text = "Update";
             txtBalance.Text = balance;
             txtPassword.ReadOnly = true;
         }
@@ -165,12 +108,93 @@ namespace LoginProject
             txtSearch.Clear();
             txtBalance.Clear();
             txtAdm.SelectedIndex = -1;
-            btnSave.Text = "Create";
+            btnSalvar.Text = "Create";
         }
 
 
-        private void btnDelete_Click(object sender, EventArgs e)
+
+        private void usersManagement_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            string isAdm;
+            if (txtAdm.Text == "Yes")
+                isAdm = "Y";
+            else
+                isAdm = "N";
+            try
+            {
+                if (btnSalvar.Text == "Create")
+                {
+                    User user = new User();
+                    if (txtName.Text == "" || txtUsername.Text == "" || txtPassword.Text == "")
+                        MessageBox.Show("Fill in all fields");
+                    else
+                    {
+                        bool verifica = user.CreateUser(txtName.Text, txtUsername.Text, txtPassword.Text, isAdm, int.Parse(txtBalance.Text));
+                        if (verifica)
+                        {
+                            limpar();
+                            getUser();
+                            MessageBox.Show(user.Message);
+                        }
+                        else
+                        {
+                            MessageBox.Show(user.Message);
+                        }
+                    }
+                }
+                else if (btnSalvar.Text == "Update")
+                {
+
+                    User user = new User();
+                    if (txtPassword.Text != "")
+                    {
+                        MessageBox.Show("Impossivel alterar senha");
+                    }
+                    else if (txtName.Text == "" || txtUsername.Text == "")
+                        MessageBox.Show("Insira as informações corretamente");
+                    else
+                    {
+                        
+
+                        bool verifica = user.UpdateUser(id, txtName.Text, txtUsername.Text, isAdm, int.Parse(txtBalance.Text));
+
+                        if (verifica)
+                        {
+                            limpar();
+                            getUser();
+                            MessageBox.Show(user.Message);
+                        }
+                        else
+                        {
+                            MessageBox.Show(user.Message);
+                        }
+                    }
+
+                }
+            } catch (FormatException ex)
+            {
+                MessageBox.Show("ERROR: Incorrect Input type");
+            }
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            getUser();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+
             if (DialogResult.Yes == MessageBox.Show("Are you sure you want to delete this item?", "Confirm", MessageBoxButtons.YesNo))
             {
                 User user = new User(id);
@@ -179,9 +203,42 @@ namespace LoginProject
             }
         }
 
-        private void usersManagement_Load(object sender, EventArgs e)
+        private void rjButton2_Click(object sender, EventArgs e)
         {
+            txtName.Text = "";
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            btnSalvar.Text = "Create";
+            txtPassword.ReadOnly = false;
+        }
 
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnPurchase_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '*')
+            {
+                txtPassword.PasswordChar = '\0';
+                picPass.Image = Properties.Resources.view;
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+                picPass.Image = Properties.Resources.hide;
+            }
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }
