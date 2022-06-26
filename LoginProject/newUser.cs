@@ -66,7 +66,7 @@ namespace LoginProject
 
         private void picPass2_Click(object sender, EventArgs e)
         {
-            if (txtPass.PasswordChar == '*')
+            if (txtPass2.PasswordChar == '*')
             {
                 txtPass2.PasswordChar = '\0';
                 picPass2.Image = Properties.Resources.view;

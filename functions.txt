@@ -1,8 +1,0 @@
-CREATE DEFINER=`root`@`localhost` FUNCTION `getPokeImage`( nPokemon INT) RETURNS longblob
-return (SELECT picture FROM pokemons where numPokemon = nPokemon)
-
-CREATE DEFINER=`root`@`localhost` FUNCTION `getPokemon`( nPokemon INT) RETURNS varchar(45) CHARSET utf8mb3
-return (SELECT `name` FROM pokemons where numPokemon = nPokemon)
-
-CREATE DEFINER=`root`@`localhost` FUNCTION `getPokeType`( nPokemon INT) RETURNS varchar(45) CHARSET utf8mb3
-return (SELECT `type` FROM pokemons where numPokemon = nPokemon)

@@ -33,36 +33,41 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.picPokemon = new System.Windows.Forms.PictureBox();
             this.lblAtttack = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblType = new System.Windows.Forms.Label();
             this.lblHp = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblBalance = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picPokemon = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.picInventory = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picBuy = new System.Windows.Forms.PictureBox();
+            this.btnSell = new Market.Style.RJButton();
             this.btnPurchase = new Market.Style.RJButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPokemon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBuy)).BeginInit();
             this.SuspendLayout();
             // 
             // lstPokemon
@@ -115,16 +120,6 @@
             this.panel1.Size = new System.Drawing.Size(523, 786);
             this.panel1.TabIndex = 18;
             // 
-            // picPokemon
-            // 
-            this.picPokemon.Image = global::LoginProject.Properties.Resources.pokeball2;
-            this.picPokemon.Location = new System.Drawing.Point(41, 183);
-            this.picPokemon.Name = "picPokemon";
-            this.picPokemon.Size = new System.Drawing.Size(423, 243);
-            this.picPokemon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPokemon.TabIndex = 17;
-            this.picPokemon.TabStop = false;
-            // 
             // lblAtttack
             // 
             this.lblAtttack.AutoSize = true;
@@ -149,17 +144,6 @@
             this.lblPrice.TabIndex = 14;
             this.lblPrice.Text = "???";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
-            this.pictureBox3.Image = global::LoginProject.Properties.Resources.battle;
-            this.pictureBox3.Location = new System.Drawing.Point(41, 570);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            // 
             // lblName
             // 
             this.lblName.AutoSize = true;
@@ -170,28 +154,6 @@
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(0, 48);
             this.lblName.TabIndex = 1;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
-            this.pictureBox6.Image = global::LoginProject.Properties.Resources.icons8_coin_64_1_;
-            this.pictureBox6.Location = new System.Drawing.Point(321, 681);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 13;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
-            this.pictureBox4.Image = global::LoginProject.Properties.Resources.life;
-            this.pictureBox4.Location = new System.Drawing.Point(321, 570);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 8;
-            this.pictureBox4.TabStop = false;
             // 
             // lblType
             // 
@@ -217,17 +179,6 @@
             this.lblHp.TabIndex = 10;
             this.lblHp.Text = "???";
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(41, 681);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
-            // 
             // lblBalance
             // 
             this.lblBalance.AutoSize = true;
@@ -243,6 +194,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.picBuy);
+            this.panel2.Controls.Add(this.picInventory);
+            this.panel2.Controls.Add(this.btnSell);
             this.panel2.Controls.Add(this.pictureBox10);
             this.panel2.Controls.Add(this.pictureBox9);
             this.panel2.Controls.Add(this.pictureBox7);
@@ -258,10 +212,88 @@
             this.panel2.TabIndex = 19;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
+            this.pictureBox1.Image = global::LoginProject.Properties.Resources.pokemon_logo_8;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // picPokemon
+            // 
+            this.picPokemon.Image = global::LoginProject.Properties.Resources.pokeball2;
+            this.picPokemon.Location = new System.Drawing.Point(41, 183);
+            this.picPokemon.Name = "picPokemon";
+            this.picPokemon.Size = new System.Drawing.Size(423, 243);
+            this.picPokemon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPokemon.TabIndex = 17;
+            this.picPokemon.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
+            this.pictureBox3.Image = global::LoginProject.Properties.Resources.battle;
+            this.pictureBox3.Location = new System.Drawing.Point(41, 570);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
+            this.pictureBox6.Image = global::LoginProject.Properties.Resources.icons8_coin_64_1_;
+            this.pictureBox6.Location = new System.Drawing.Point(321, 681);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 13;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
+            this.pictureBox4.Image = global::LoginProject.Properties.Resources.life;
+            this.pictureBox4.Location = new System.Drawing.Point(321, 570);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 8;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(41, 681);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            // 
+            // picInventory
+            // 
+            this.picInventory.BackColor = System.Drawing.Color.White;
+            this.picInventory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picInventory.Image = global::LoginProject.Properties.Resources.mochila4;
+            this.picInventory.Location = new System.Drawing.Point(120, 251);
+            this.picInventory.Name = "picInventory";
+            this.picInventory.Size = new System.Drawing.Size(38, 37);
+            this.picInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picInventory.TabIndex = 18;
+            this.picInventory.TabStop = false;
+            this.picInventory.Click += new System.EventHandler(this.picInventory_Click);
+            // 
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(708, 28);
+            this.pictureBox10.Location = new System.Drawing.Point(698, 28);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(15, 15);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -302,6 +334,40 @@
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
+            // picBuy
+            // 
+            this.picBuy.BackColor = System.Drawing.Color.White;
+            this.picBuy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBuy.Image = global::LoginProject.Properties.Resources.add_to_cart;
+            this.picBuy.Location = new System.Drawing.Point(61, 251);
+            this.picBuy.Name = "picBuy";
+            this.picBuy.Size = new System.Drawing.Size(38, 37);
+            this.picBuy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBuy.TabIndex = 19;
+            this.picBuy.TabStop = false;
+            this.picBuy.Click += new System.EventHandler(this.picBuy_Click);
+            // 
+            // btnSell
+            // 
+            this.btnSell.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSell.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSell.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSell.BorderRadius = 20;
+            this.btnSell.BorderSize = 0;
+            this.btnSell.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSell.FlatAppearance.BorderSize = 0;
+            this.btnSell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSell.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSell.ForeColor = System.Drawing.Color.White;
+            this.btnSell.Location = new System.Drawing.Point(563, 678);
+            this.btnSell.Name = "btnSell";
+            this.btnSell.Size = new System.Drawing.Size(150, 40);
+            this.btnSell.TabIndex = 17;
+            this.btnSell.Text = "Sell";
+            this.btnSell.TextColor = System.Drawing.Color.White;
+            this.btnSell.UseVisualStyleBackColor = false;
+            this.btnSell.Click += new System.EventHandler(this.btnSell_Click);
+            // 
             // btnPurchase
             // 
             this.btnPurchase.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -314,25 +380,14 @@
             this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPurchase.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPurchase.ForeColor = System.Drawing.Color.White;
-            this.btnPurchase.Location = new System.Drawing.Point(562, 676);
+            this.btnPurchase.Location = new System.Drawing.Point(358, 678);
             this.btnPurchase.Name = "btnPurchase";
             this.btnPurchase.Size = new System.Drawing.Size(150, 40);
             this.btnPurchase.TabIndex = 5;
-            this.btnPurchase.Text = "Purchase";
+            this.btnPurchase.Text = "Buy";
             this.btnPurchase.TextColor = System.Drawing.Color.White;
             this.btnPurchase.UseVisualStyleBackColor = false;
             this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
-            this.pictureBox1.Image = global::LoginProject.Properties.Resources.pokemon_logo_8;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
             // 
             // Pokeshop
             // 
@@ -345,21 +400,23 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Pokeshop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pokeshop";
+            this.Text = "d";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPokemon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picInventory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBuy)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -388,5 +445,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private Market.Style.RJButton btnSell;
+        private System.Windows.Forms.PictureBox picInventory;
+        private System.Windows.Forms.PictureBox picBuy;
     }
 }

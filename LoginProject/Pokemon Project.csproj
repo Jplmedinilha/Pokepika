@@ -293,9 +293,6 @@
     <None Include="Resources\minus-button-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\mochila.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\2837921869.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -339,6 +336,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reset-password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mochila2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mochila.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mochila4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-to-cart.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -150,15 +150,7 @@ namespace LoginProject
 
         }
 
-        private void rjButton3_Click(object sender, EventArgs e)
-        {
-            if (DialogResult.Yes == MessageBox.Show("Are you sure you want to delete this item?", "Confirm", MessageBoxButtons.YesNo))
-            {
-                Type type = new Type(id);
-                limpar();
-                getType();
-            }
-        }
+     
 
         private void rjButton2_Click(object sender, EventArgs e)
         {

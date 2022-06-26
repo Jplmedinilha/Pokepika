@@ -60,9 +60,9 @@ namespace LoginProject
             }
         }
 
-        public bool getInventory(String username)
+        public bool getPokemonToBuy(String username)
         {
-            cmd.CommandText = $"SELECT getPokemon(numPokemon) FROM userpokemon where idUser = (SELECT idUser from `user` where username = '{username}');";
+            cmd.CommandText = $"SELECT * FROM pokemons WHERE numPokemon NOT IN (SELECT up.numPokemon FROM pokemon.pokemons AS p INNER JOIN `userpokemon` AS up ON p.numPokemon = up.numPokemon WHERE up.idUser = (SELECT idUser FROM `user` WHERE username = '{username}'));";
 
             try
             {
@@ -76,8 +76,24 @@ namespace LoginProject
             {
                 return false;
             }
+        }
 
+        public bool getMyPokemons(String username)
+        {
+            cmd.CommandText = $"SELECT * from pokemon.pokemons as p INNER JOIN `userpokemon` as up ON p.numPokemon = up.numPokemon WHERE up.idUser = (SELECT idUser from `user` where username = '{username}');";
 
+            try
+            {
+                conn.disconnect();
+                cmd.Connection = conn.connect();
+                leitura = cmd.ExecuteReader();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
 
 
@@ -100,5 +116,24 @@ namespace LoginProject
 
 
         }
+
+        public void sellPokemon(string username, int numPokemon)
+        {
+            cmd.CommandText = "CALL sellPokemon(@username, @numPokemon);";
+         
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.Parameters.AddWithValue("@numPokemon", numPokemon);
+
+            try
+            {
+                cmd.Connection = conn.connect();
+                leitura = cmd.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
-   }
+ }

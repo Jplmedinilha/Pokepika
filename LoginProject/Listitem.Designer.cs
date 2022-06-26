@@ -36,7 +36,7 @@
             // 
             // picPoke
             // 
-            this.picPoke.Image = global::LoginProject.Properties.Resources._001;
+           
             this.picPoke.Location = new System.Drawing.Point(-1, 0);
             this.picPoke.Name = "picPoke";
             this.picPoke.Size = new System.Drawing.Size(97, 80);

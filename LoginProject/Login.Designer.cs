@@ -38,12 +38,12 @@ namespace LoginProject
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.picPass = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.rjButton1 = new Market.Style.RJButton();
+            this.picPass = new System.Windows.Forms.PictureBox();
             this.rjButton2 = new Market.Style.RJButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -61,7 +61,6 @@ namespace LoginProject
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(284, 37);
             this.txtUser.TabIndex = 0;
-            this.txtUser.Text = "ADM";
             this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             // 
             // txtPass
@@ -73,7 +72,6 @@ namespace LoginProject
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(284, 37);
             this.txtPass.TabIndex = 1;
-            this.txtPass.Text = "ADM";
             this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
             // 
             // lblForgot
@@ -150,28 +148,17 @@ namespace LoginProject
             this.panel2.Size = new System.Drawing.Size(447, 701);
             this.panel2.TabIndex = 24;
             // 
-            // picPass
+            // label2
             // 
-            this.picPass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picPass.Image = global::LoginProject.Properties.Resources.hide;
-            this.picPass.Location = new System.Drawing.Point(384, 403);
-            this.picPass.Name = "picPass";
-            this.picPass.Size = new System.Drawing.Size(32, 37);
-            this.picPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPass.TabIndex = 23;
-            this.picPass.TabStop = false;
-            this.picPass.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
-            this.pictureBox1.Image = global::LoginProject.Properties.Resources.pokemon_logo_8;
-            this.pictureBox1.Location = new System.Drawing.Point(84, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(284, 169);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(78, 367);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(139, 33);
+            this.label2.TabIndex = 96;
+            this.label2.Text = "Password";
             // 
             // label1
             // 
@@ -184,18 +171,6 @@ namespace LoginProject
             this.label1.Size = new System.Drawing.Size(144, 33);
             this.label1.TabIndex = 95;
             this.label1.Text = "Username";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(78, 367);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 33);
-            this.label2.TabIndex = 96;
-            this.label2.Text = "Password";
             // 
             // rjButton1
             // 
@@ -218,6 +193,18 @@ namespace LoginProject
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
+            // picPass
+            // 
+            this.picPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picPass.Image = global::LoginProject.Properties.Resources.hide;
+            this.picPass.Location = new System.Drawing.Point(384, 403);
+            this.picPass.Name = "picPass";
+            this.picPass.Size = new System.Drawing.Size(32, 37);
+            this.picPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPass.TabIndex = 23;
+            this.picPass.TabStop = false;
+            this.picPass.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // rjButton2
             // 
             this.rjButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -238,6 +225,17 @@ namespace LoginProject
             this.rjButton2.TextColor = System.Drawing.Color.White;
             this.rjButton2.UseVisualStyleBackColor = false;
             this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
+            this.pictureBox1.Image = global::LoginProject.Properties.Resources.pokemon_logo_8;
+            this.pictureBox1.Location = new System.Drawing.Point(84, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(284, 169);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
             // 
             // Login
             // 

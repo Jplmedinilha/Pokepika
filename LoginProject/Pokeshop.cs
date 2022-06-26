@@ -27,15 +27,15 @@ namespace LoginProject
             lstPokemon.GridLines = true;
             lstPokemon.Sorting = SortOrder.Ascending;
 
-            lstPokemon.Columns.Add("Num", 60, HorizontalAlignment.Left);
-            lstPokemon.Columns.Add("Name", 60, HorizontalAlignment.Left);
-            lstPokemon.Columns.Add("Type", 60, HorizontalAlignment.Left);
-            lstPokemon.Columns.Add("Atk", 60, HorizontalAlignment.Left);
-            lstPokemon.Columns.Add("HP", 60, HorizontalAlignment.Left);
-            lstPokemon.Columns.Add("$$", 60, HorizontalAlignment.Left);
-            lstPokemon.Columns.Add("Gym", 60, HorizontalAlignment.Left);
+            lstPokemon.Columns.Add("Number", 90, HorizontalAlignment.Center);
+            lstPokemon.Columns.Add("Name", 130, HorizontalAlignment.Left);
+            lstPokemon.Columns.Add("Type", 100, HorizontalAlignment.Left);
+            lstPokemon.Columns.Add("Attack", 80, HorizontalAlignment.Left);
+            lstPokemon.Columns.Add("HitPoints", 80, HorizontalAlignment.Left);
+            lstPokemon.Columns.Add("Price", 80, HorizontalAlignment.Left);
+            lstPokemon.Columns.Add("Gym", 86, HorizontalAlignment.Left);
 
-
+            btnSell.Enabled = false;
             updateCoins();
 
             getPkm();
@@ -87,13 +87,14 @@ namespace LoginProject
                         {
                             MessageBox.Show($"Congrats! You've bought {lblName.Text}");
                             updateCoins();
+                            getPkm();
                         }
                     }
                 }
 
             } else
             {
-                MessageBox.Show("Please choose one Pokemon");
+                MessageBox.Show("Please choose one Pokemon to buy");
             }
             
         }
@@ -123,24 +124,50 @@ namespace LoginProject
         public void getPkm()
         {
             lstPokemon.Items.Clear();
-            Pokemon pkm = new Pokemon(txtSearch.Text);
-            while (pkm.leitura.Read())
+            Inventory inventory = new Inventory();
+            inventory.getPokemonToBuy(Login.getUsername());
+            while (inventory.leitura.Read())
             {
                 string[] row =
                 {
-                    pkm.leitura.GetString(0),
-                    pkm.leitura.GetString(1),
-                    pkm.leitura.GetString(2),
-                    pkm.leitura.GetString(3),
-                    pkm.leitura.GetString(4),
-                    pkm.leitura.GetString(5),
-                    pkm.leitura.GetString(7),
+                    inventory.leitura.GetString(0),
+                    inventory.leitura.GetString(1),
+                    inventory.leitura.GetString(2),
+                    inventory.leitura.GetString(3),
+                    inventory.leitura.GetString(4),
+                    inventory.leitura.GetString(5),
+                    inventory.leitura.GetString(7),
                 };
 
                 var rowView = new ListViewItem(row);
                 lstPokemon.Items.Add(rowView);
             }
         }
+
+        public void getMyPkms()
+        {
+            lstPokemon.Items.Clear();
+            Inventory inventory = new Inventory();
+            inventory.getMyPokemons(Login.getUsername());
+            while (inventory.leitura.Read())
+            {
+                string[] row =
+                {
+                    inventory.leitura.GetString(0),
+                    inventory.leitura.GetString(1),
+                    inventory.leitura.GetString(2),
+                    inventory.leitura.GetString(3),
+                    inventory.leitura.GetString(4),
+                    inventory.leitura.GetString(5),
+                    inventory.leitura.GetString(7),
+                };
+
+                var rowView = new ListViewItem(row);
+                lstPokemon.Items.Add(rowView);
+            }
+        }
+
+
 
         public void updateCoins()
         {
@@ -152,5 +179,39 @@ namespace LoginProject
             getPkm();
         }
 
+        private void picInventory_Click(object sender, EventArgs e)
+        {
+            getMyPkms();
+            btnPurchase.Enabled = false;
+            btnSell.Enabled = true;
+        }
+
+        private void picBuy_Click(object sender, EventArgs e)
+        {
+            getPkm();
+            btnPurchase.Enabled = true;
+            btnSell.Enabled = false;
+        }
+
+        private void btnSell_Click(object sender, EventArgs e)
+        {
+
+            if (id != -1)
+            {
+                string name = lstPokemon.SelectedItems[0].SubItems[1].Text;
+                if (DialogResult.Yes == MessageBox.Show($"Are you sure you want to sell {name}?", "Sales Confirmation", MessageBoxButtons.YesNo))
+                {
+                    Inventory inventory = new Inventory();
+                    inventory.sellPokemon(Login.getUsername(), id);
+                    updateCoins();
+                    getMyPkms();
+                }
+               
+            } 
+            else
+            {
+                MessageBox.Show("Please choose one Pokemon to sell");
+            }
+        }
     }
 }
