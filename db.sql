@@ -158,7 +158,7 @@ SELECT * FROM pokemons WHERE numPokemon NOT IN (
 CALL updateBalance(20, 'teste'); -- quando é feita uma compra. o saldo do usuario é descontado
 CALL deleteUser(3); -- antes de deletar um usuario, ele é deletado da tabela `userpokemon`
 CALL deletePokemon(8); -- antes de deletar um pokemon, ele é deletado da tabela `userpokemon`
-CALL sellPokemon('teste', 8); -- vende o pokemon, retira de seu invenriario e atualiza seu saldo
+CALL sellPokemon('teste', 8); -- vende o pokemon, retira de seu inventario e atualiza seu saldo
 
 
 

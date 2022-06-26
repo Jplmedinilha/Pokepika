@@ -245,6 +245,7 @@ namespace LoginProject
             this.Name = "newUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "newUser";
+            this.Load += new System.EventHandler(this.newUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPass1)).EndInit();

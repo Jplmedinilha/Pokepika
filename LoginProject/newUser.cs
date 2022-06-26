@@ -19,30 +19,35 @@ namespace LoginProject
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (txtPass.Text == txtPass2.Text)
+            if (txtName.Text == "" || txtUsername.Text == "" || txtPass.Text == "" || txtPass2.Text == "")
+                MessageBox.Show("Please fill in all fields");
+            else
             {
-
-                User user = new User();
-                bool verifica = user.CreateDefaultUser(txtName.Text, txtUsername.Text, txtPass.Text);
-                if (verifica)
+                if (txtPass.Text == txtPass2.Text)
                 {
-                    txtPass.Clear();
-                    txtPass2.Clear();
-                    txtName.Clear();
-                    txtUsername.Clear();
-                    MessageBox.Show(user.Message);
-                    this.Hide();
+
+                    User user = new User();
+                    bool verifica = user.CreateDefaultUser(txtName.Text, txtUsername.Text, txtPass.Text);
+                    if (verifica)
+                    {
+                        txtPass.Clear();
+                        txtPass2.Clear();
+                        txtName.Clear();
+                        txtUsername.Clear();
+                        MessageBox.Show(user.Message);
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show(user.Message);
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show(user.Message);
+                    MessageBox.Show("Incorrect Password!");
                 }
-
-            }
-            else
-            {
-                MessageBox.Show("Incorrect Password!");
-            }
+            }            
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
@@ -81,6 +86,11 @@ namespace LoginProject
         private void pictureBox10_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void newUser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
