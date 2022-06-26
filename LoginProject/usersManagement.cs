@@ -109,6 +109,8 @@ namespace LoginProject
             txtBalance.Clear();
             txtAdm.SelectedIndex = -1;
             btnSalvar.Text = "Create";
+  
+            txtPassword.ReadOnly = false;
         }
 
 
@@ -205,11 +207,7 @@ namespace LoginProject
 
         private void rjButton2_Click(object sender, EventArgs e)
         {
-            txtName.Text = "";
-            txtUsername.Text = "";
-            txtPassword.Text = "";
-            btnSalvar.Text = "Create";
-            txtPassword.ReadOnly = false;
+            limpar();
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)

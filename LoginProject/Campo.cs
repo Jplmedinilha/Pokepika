@@ -51,8 +51,7 @@ namespace LoginProject
             lblUsername.Visible = true;
 
             if (Control.ModifierKeys == Keys.Tab)
-                flowLayoutPanel1.Enabled = false;
-
+                MessageBox.Show("Teste");
             if (Control.ModifierKeys == Keys.Shift)
             {
                 if (e.KeyCode == Keys.Left || e.KeyCode == Keys.A)
@@ -138,13 +137,13 @@ namespace LoginProject
         }
 
         private void Campo_Load(object sender, EventArgs e)
-        {
-          
+        { 
             populateItems();
             flowLayoutPanel1.Enabled = false; 
             hideMenu();
-
         }
+
+      
 
         public void populateItems()
         {

@@ -49,7 +49,7 @@ namespace LoginProject
 
         private void Listitem_Load(object sender, EventArgs e)
         {
-
+            this.TabStop = false;
         }
     }
 }

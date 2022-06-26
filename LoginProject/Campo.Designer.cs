@@ -36,9 +36,12 @@ namespace LoginProject
             this.moveTimer = new System.Windows.Forms.Timer(this.components);
             this.lblUsername = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCloseMenu = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblPokeLabel = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
+            this.picCoins = new System.Windows.Forms.PictureBox();
             this.lblBalance = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -53,10 +56,10 @@ namespace LoginProject
             this.picGrass2 = new System.Windows.Forms.PictureBox();
             this.picCharacter = new System.Windows.Forms.PictureBox();
             this.picMart = new System.Windows.Forms.PictureBox();
-            this.btnCloseMenu = new System.Windows.Forms.PictureBox();
-            this.picLogo = new System.Windows.Forms.PictureBox();
-            this.picCoins = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCloseMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCoins)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
@@ -70,9 +73,6 @@ namespace LoginProject
             ((System.ComponentModel.ISupportInitialize)(this.picGrass2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCharacter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCloseMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCoins)).BeginInit();
             this.SuspendLayout();
             // 
             // labely
@@ -127,6 +127,18 @@ namespace LoginProject
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // btnCloseMenu
+            // 
+            this.btnCloseMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
+            this.btnCloseMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseMenu.Image")));
+            this.btnCloseMenu.Location = new System.Drawing.Point(331, 14);
+            this.btnCloseMenu.Name = "btnCloseMenu";
+            this.btnCloseMenu.Size = new System.Drawing.Size(15, 15);
+            this.btnCloseMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCloseMenu.TabIndex = 71;
+            this.btnCloseMenu.TabStop = false;
+            this.btnCloseMenu.Click += new System.EventHandler(this.btnCloseMenu_Click);
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
@@ -134,9 +146,19 @@ namespace LoginProject
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(317, 404);
             this.flowLayoutPanel1.TabIndex = 76;
-            this.flowLayoutPanel1.TabStop = true;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             this.flowLayoutPanel1.Enter += new System.EventHandler(this.flowLayoutPanel1_Enter);
+            // 
+            // picLogo
+            // 
+            this.picLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
+            this.picLogo.Image = global::LoginProject.Properties.Resources.pokemon_logo_8;
+            this.picLogo.Location = new System.Drawing.Point(12, 14);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(100, 50);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 75;
+            this.picLogo.TabStop = false;
             // 
             // lblPokeLabel
             // 
@@ -168,6 +190,17 @@ namespace LoginProject
             this.lblUser.TabIndex = 72;
             this.lblUser.Text = "Usernameds";
             this.lblUser.Click += new System.EventHandler(this.lblUser_Click);
+            // 
+            // picCoins
+            // 
+            this.picCoins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
+            this.picCoins.Image = global::LoginProject.Properties.Resources.icons8_coin_64;
+            this.picCoins.Location = new System.Drawing.Point(219, 219);
+            this.picCoins.Name = "picCoins";
+            this.picCoins.Size = new System.Drawing.Size(40, 40);
+            this.picCoins.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCoins.TabIndex = 70;
+            this.picCoins.TabStop = false;
             // 
             // lblBalance
             // 
@@ -317,40 +350,6 @@ namespace LoginProject
             this.picMart.TabIndex = 6;
             this.picMart.TabStop = false;
             // 
-            // btnCloseMenu
-            // 
-            this.btnCloseMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
-            this.btnCloseMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseMenu.Image")));
-            this.btnCloseMenu.Location = new System.Drawing.Point(331, 14);
-            this.btnCloseMenu.Name = "btnCloseMenu";
-            this.btnCloseMenu.Size = new System.Drawing.Size(15, 15);
-            this.btnCloseMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCloseMenu.TabIndex = 71;
-            this.btnCloseMenu.TabStop = false;
-            this.btnCloseMenu.Click += new System.EventHandler(this.btnCloseMenu_Click);
-            // 
-            // picLogo
-            // 
-            this.picLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
-            this.picLogo.Image = global::LoginProject.Properties.Resources.pokemon_logo_8;
-            this.picLogo.Location = new System.Drawing.Point(12, 14);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(100, 50);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 75;
-            this.picLogo.TabStop = false;
-            // 
-            // picCoins
-            // 
-            this.picCoins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(68)))));
-            this.picCoins.Image = global::LoginProject.Properties.Resources.icons8_coin_64;
-            this.picCoins.Location = new System.Drawing.Point(219, 219);
-            this.picCoins.Name = "picCoins";
-            this.picCoins.Size = new System.Drawing.Size(40, 40);
-            this.picCoins.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCoins.TabIndex = 70;
-            this.picCoins.TabStop = false;
-            // 
             // Campo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,6 +385,9 @@ namespace LoginProject
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Campo_KeyUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCloseMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCoins)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
@@ -399,9 +401,6 @@ namespace LoginProject
             ((System.ComponentModel.ISupportInitialize)(this.picGrass2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCharacter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCloseMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCoins)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
