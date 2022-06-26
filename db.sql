@@ -125,7 +125,7 @@ BEGIN
     INSERT INTO hist_trade VALUES (old.idUser, old.numPokemon, NOW(),  2);
 END$$
 
-INSERT INTO hist_trade VALUES (1, 1, NOW(),  2);
+
 -- exs inserts 
 -- cricao tipos do pokemon
 INSERT INTO `pokemon`.`types` (`idType`, `type`) VALUES ('4', 'Raio');

@@ -136,7 +136,7 @@ namespace LoginProject
 
         public Pokemon(String nome)
         {
-            cmd.CommandText = "SELECT * FROM pokemon.pokemons WHERE name like '%" + nome + "%';";
+            cmd.CommandText = $"SELECT * FROM pokemon.pokemons WHERE name like '%{nome}%'";
 
             try
             {

@@ -50,8 +50,6 @@ namespace LoginProject
             picCharacter.Visible = true;
             lblUsername.Visible = true;
 
-            if (Control.ModifierKeys == Keys.Tab)
-                MessageBox.Show("Teste");
             if (Control.ModifierKeys == Keys.Shift)
             {
                 if (e.KeyCode == Keys.Left || e.KeyCode == Keys.A)
